@@ -123,9 +123,9 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 5%;
     
-    text-align: center;
+    text-align: left;
     background-color: rgba(255, 255, 255, .8);
     opacity: 0;
     -webkit-transition: all 150ms ease-in-out;
@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom_overlay_inner {
     position: absolute;
-    top: 50%;
+    bottom: 35%;
     left: 10px;
     right: 10px;
     transform: translateY(-50%);
@@ -154,14 +154,16 @@ h1, h2, h3, h4, h5, h6 {
 .custom_overlay p {
     color: #000;
     line-height: 1.4em;
+    position:absolute;
+    right:50%;
 }
 
 .custom_overlay h4:after {
     background-color: #cf751b;
     content: "";
     position: absolute;
-    left: 35%;
-    right: 35%;
+    left: 0;
+    right: 50%;
     bottom: -5px;
     height: 2px;
   
@@ -714,24 +716,32 @@ section {
 # Why Us
 --------------------------------------------------------------*/
 .why-us {
-    padding-top: 0;
+    padding-top: 50px;
 }
 
     .why-us .box {
         padding: 50px 30px;
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         transition: all ease-in-out 0.3s;
+        height: 100%;
+      
     }
 
         .why-us .box span {
             display: block;
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             color: #3c3e82;
         }
+        .why-us .box img {
+            margin-bottom: 20px;
+            padding-left: 20%;
+            padding-right: 20%;
+            
+        }
 
         .why-us .box h4 {
-            font-size: 24px;
+            font-size: 100%;
             font-weight: 600;
             padding: 0;
             margin: 20px 0;
@@ -746,13 +756,13 @@ section {
         }
 
         .why-us .box:hover {
-            background: #cf751b;
+            background: #ffffff;
             padding: 30px 30px 70px 30px;
             box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
         }
 
             .why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p {
-                color: #fff;
+               
             }
 
 /*--------------------------------------------------------------
@@ -826,9 +836,9 @@ section {
         }
 
     .services .icon-box h4 {
-        font-weight: 500;
-        margin-bottom: 1px;
-        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 22px;
     }
 
         .services .icon-box h4 a {
@@ -837,7 +847,7 @@ section {
     .services .icon-box h5 {
         font-weight: 400;
         margin-bottom: 4px;
-        font-size: 20px;
+        font-size: 16px;
         font-style:italic;
     }
     .services .icon-box h6 {
@@ -851,6 +861,16 @@ section {
         line-height: 24px;
         font-size: 14px;
         margin-bottom: 0;
+    }
+    .services .icon-box ul {
+      
+       left:0;
+
+    } .services .icon-box li {
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 5px;
+        text-align:left;
     }
 
     .services .icon-box:hover {
@@ -868,11 +888,20 @@ section {
             }
 
             .services .icon-box:hover .icon::before {
-                background: #3c3e82;
+                background: #805219;
             }
 
         .services .icon-box:hover h4 a, .services .icon-box:hover p {
             color: #fff;
+            
+
+        } .services .icon-box:hover h5 {
+            color: #efefef;
+
+        }.services .icon-box:hover li a {
+            color: #fff;
+            font-weight:600;
+            
         }
 
 /*--------------------------------------------------------------
@@ -1195,6 +1224,15 @@ section {
     text-align: center;
     box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
     padding: 20px 0 30px 0;
+    
+}.contact .row {
+    color: #444444;
+    display: flex;
+    justify-content: space-around;
+    
+    
+  
+    
 }
 
     .contact .info-box i {
@@ -1380,7 +1418,7 @@ section {
 
         .portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
             margin-top: 5px;
-            text-align: right;
+            text-align: left;
         }
 
         .portfolio-details .portfolio-details-carousel .owl-dot {
