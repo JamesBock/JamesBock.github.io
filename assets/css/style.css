@@ -548,6 +548,7 @@ h1, h2, h3, h4, h5, h6 {
     background: url("../img/hero-bg.jpg") top center;
     background-size: cover;
     position: relative;
+    
 }
 
     #hero:before {
@@ -1403,6 +1404,7 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
     padding-top: 0px;
+   
 }
 
     .portfolio-details .portfolio-details-container {
@@ -1438,7 +1440,7 @@ section {
         padding: 30px;
         position: absolute;
         right: 0;
-        bottom: -70px;
+        bottom: -110px;
         background: #fff;
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         z-index: 2;
@@ -1463,14 +1465,15 @@ section {
             }
 
     .portfolio-details .portfolio-description {
-        padding-top: 50px;
+        padding-top: 3%;
     }
 
         .portfolio-details .portfolio-description h2 {
             width: 50%;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 80px;
+            
         }
 
         .portfolio-details .portfolio-description p {
