@@ -117,13 +117,17 @@ h1, h2, h3, h4, h5, h6 {
 .custom_overlay_wrapper {
     position: relative;
 }
+.custom_overlay_wrapper img{
+    /*width:auto;*/
+    max-height:600px;
+}
 
 .custom_overlay {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 5%;
+    right: 0;
     
     text-align: left;
     background-color: rgba(255, 255, 255, .8);
@@ -140,9 +144,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom_overlay_inner {
     position: absolute;
-    bottom: 35%;
-    left: 10px;
-    right: 10px;
+    bottom: 30%;
+    left: 5%;
+    right: 0;
     transform: translateY(-50%);
 }
 
@@ -173,11 +177,11 @@ h1, h2, h3, h4, h5, h6 {
     .custom_overlay h4
 
 {
-    font-size: 80%;
+    /*font-size: 90%;*/
 }
 
 .custom_overlay p {
-    font-size: 85%;
+    /*font-size: 95%;*/
     line-height: 1.2em;
 }
 
@@ -247,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #header {
     background: rgba(52, 58, 64, 0.2);
-    transition: all 0.5s;
+    transition: all 0.9s;
     z-index: 997;
     top: 40px;
 }
@@ -258,18 +262,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 
-        #header.header-scrolled h2 {
-            font-size: 20px;
-            margin: 0;
-            padding: 0;
-            line-height: 1;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #fff;
-        }
-
-    #header .logo {
+     #header .header-scrolled a {
         font-size: 28px;
         margin: 0;
         padding: 0;
@@ -277,10 +270,58 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
+        visibility:hidden
+    }
+    #header h2 {
+        font-size: 28px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        
+    }
+     #header.header-scrolled h2 {
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        visibility:hidden;
+
     }
 
-        /*#header .logo h2 {
-            font-size: 20px;
+    /*#header .logo {
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        visibility:hidden;
+        
+    }*/ 
+
+    #header.header-scrolled  h1 a{
+        font-size: 28px;
+        color:#fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        visibility:visible;
+    }
+    
+   
+        #header h1 {
+            font-size: 28px;
             margin: 0;
             padding: 0;
             line-height: 1;
@@ -289,10 +330,11 @@ h1, h2, h3, h4, h5, h6 {
             text-transform: uppercase;
             color: #fff;
             visibility: hidden
-        }*/
+        }
 
         #header .logo a {
-            color: #fff;
+           color: #fff;
+           
         }
 
         #header .logo img {
@@ -1415,6 +1457,7 @@ section {
     .portfolio-details .portfolio-details-carousel {
         position: relative;
         z-index: 1;
+
         
     }
 

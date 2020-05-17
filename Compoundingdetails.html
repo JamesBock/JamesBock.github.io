@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/BigHearts.png" rel="icon">
+  <link href="assets/img/BigHearts.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -73,8 +73,10 @@
                     <li class="drop-down">
                         <a href="index.html#portfolio">Portfolio</a>
                         <ul>
-                            <li><a href="#">Drug Interactions</a></li>
-                            <li><a href="#">Clinical Compounding</a></li>
+                            <li><a href="DrugInteracionsdetails.html">Drug Interactions</a></li>
+                            <li><a href="CompoundingDetails.html">Clinical Compounding</a></li>
+                            <li><a href="APIdetails.html">DrugInteractionAPI</a></li>
+                            <li><a href="WebDesignDetails.html">Web design</a></li>
                         </ul>
                     </li>
                     <li><a href="#contact">Contact</a></li>
@@ -114,7 +116,7 @@
                     <div class="portfolio-info">
                         <h3>Project Summary</h3>
                         <ul>
-                            <li><strong>Tech</strong>: C#, Blazor, HTML, CSS, FHIR, API</li>
+                            <li><strong>Tech</strong>: C#, Blazor, HTML, CSS, FHIR, REST API</li>
                             <li><strong>Libraries</strong>: Bootstrap, MediatR, Hl7, NewtonsSoft, MatBlazor</li>
                             <li><strong>Techniques</strong>: Dependency injection, Channels, Asynchrony </li>
                             <li><strong>Start date</strong>: March, 2020</li>
@@ -130,7 +132,7 @@
                         This project started as as experiment with learning Blazor and grew into a practical tool that can be used in clinical and consumer settings. 
                     </p>
                     <p>
-                        The module is designed with the use-case of an e-health record pinging the module with a patient ID that can be used to retrive the medications the patient is taking. The module then gathers the proper informations, converts it into a readable form for the National Library of Medicine's Drug Interaction API and parses the information returned from the API. Once the interactions are parsed, they must be connected with the order the prescriber wrote so modifications can be made if necessary.
+                        The module is designed with the use-case of an e-health record pinging the module with a patient ID that can be used to retrive the medications the patient is taking. The module then gathers the proper data, converts it into a readable form for the National Library of Medicine's Drug Interaction API, and parses the information returned from the API. Once the interactions are parsed, they must be connected with the order the prescriber wrote so modifications can be made if necessary based on the interactions.
                     </p>
                     <p>
                         As shown above, the interface is adaptive so it can be accessed on mobile devices if desired.
