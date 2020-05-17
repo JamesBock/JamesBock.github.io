@@ -117,7 +117,7 @@
 
     // Toggle .header-scrolled class to #header when page is scrolled
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 270) {
             $('#header').addClass('header-scrolled');
             $('#topbar').addClass('topbar-scrolled');
         } else {
@@ -126,7 +126,7 @@
         }
     });
 
-    if ($(window).scrollTop() > 100) {
+    if ($(window).scrollTop() > 270) {
         $('#header').addClass('header-scrolled');
         $('#topbar').addClass('topbar-scrolled');
     }
@@ -174,7 +174,6 @@
         //autoplay: true,
         lazyLoad:true,
         touchDrag: true,
-        autoplayHoverPause: true,
         dots: true,
         loop: true,
         items: 1

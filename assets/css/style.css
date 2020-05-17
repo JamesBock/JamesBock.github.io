@@ -117,10 +117,11 @@ h1, h2, h3, h4, h5, h6 {
 .custom_overlay_wrapper {
     position: relative;
 }
-.custom_overlay_wrapper img{
-    /*width:auto;*/
-    max-height:600px;
-}
+
+    .custom_overlay_wrapper img {
+        /*width:auto;*/
+        max-height: 600px;
+    }
 
 .custom_overlay {
     position: absolute;
@@ -128,7 +129,6 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     left: 0;
     right: 0;
-    
     text-align: left;
     background-color: rgba(255, 255, 255, .8);
     opacity: 0;
@@ -152,14 +152,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom_overlay h4 {
     position: relative;
-    
 }
 
 .custom_overlay p {
     color: #000;
     line-height: 1.4em;
-    position:absolute;
-    right:50%;
+    position: absolute;
+    right: 50%;
 }
 
 .custom_overlay h4:after {
@@ -170,21 +169,17 @@ h1, h2, h3, h4, h5, h6 {
     right: 50%;
     bottom: -5px;
     height: 2px;
-  
 }
 /*------------------- TABLET ------------------*/
 @media only screen and ( min-width: 600px ) and ( max-width: 999px ) {
-    .custom_overlay h4
+    .custom_overlay h4 {
+        /*font-size: 90%;*/
+    }
 
-{
-    /*font-size: 90%;*/
-}
-
-.custom_overlay p {
-    /*font-size: 95%;*/
-    line-height: 1.2em;
-}
-
+    .custom_overlay p {
+        /*font-size: 95%;*/
+        line-height: 1.2em;
+    }
 }
 
 /*------------------- MOBILE ------------------*/
@@ -262,16 +257,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 
-     #header .header-scrolled a {
-        font-size: 28px;
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        visibility:hidden
-    }
+        #header .header-scrolled a {
+            font-size: 28px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            visibility: hidden
+        }
+
     #header h2 {
         font-size: 28px;
         color: #fff;
@@ -281,9 +277,9 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
-        
     }
-     #header.header-scrolled h2 {
+
+    #header.header-scrolled h2 {
         font-size: 28px;
         margin: 0;
         padding: 0;
@@ -291,8 +287,7 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
-        visibility:hidden;
-
+        visibility: hidden;
     }
 
     /*#header .logo {
@@ -305,41 +300,40 @@ h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
         visibility:hidden;
         
-    }*/ 
+    }*/
 
-    #header.header-scrolled  h1 a{
+    #header.header-scrolled h1 a {
+        margin: 0 0 10px 0;
+        font-size: 48px;
+        color: #fff;
+        padding: 0;
+        line-height: 56px;
+        font-weight: 700;
+        letter-spacing: normal;
+        text-transform: uppercase;
+        visibility: visible;
+    }
+
+
+    #header h1 {
         font-size: 28px;
-        color:#fff;
         margin: 0;
         padding: 0;
         line-height: 1;
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
-        visibility:visible;
+        color: #fff;
+        visibility: hidden
     }
-    
-   
-        #header h1 {
-            font-size: 28px;
-            margin: 0;
-            padding: 0;
-            line-height: 1;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #fff;
-            visibility: hidden
-        }
 
-        #header .logo a {
-           color: #fff;
-           
-        }
+    #header .logo a {
+        color: #fff;
+    }
 
-        #header .logo img {
-            max-height: 40px;
-        }
+    #header .logo img {
+        max-height: 40px;
+    }
 
 @media (max-width: 992px) {
     #header {
@@ -590,7 +584,6 @@ h1, h2, h3, h4, h5, h6 {
     background: url("../img/hero-bg.jpg") top center;
     background-size: cover;
     position: relative;
-    
 }
 
     #hero:before {
@@ -767,7 +760,6 @@ section {
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         transition: all ease-in-out 0.3s;
         height: 100%;
-      
     }
 
         .why-us .box span {
@@ -776,11 +768,11 @@ section {
             font-weight: 700;
             color: #3c3e82;
         }
+
         .why-us .box img {
             margin-bottom: 20px;
             padding-left: 20%;
             padding-right: 20%;
-            
         }
 
         .why-us .box h4 {
@@ -805,7 +797,6 @@ section {
         }
 
             .why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p {
-               
             }
 
 /*--------------------------------------------------------------
@@ -843,7 +834,7 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
     text-align: center;
-    padding: 20px 20px ;
+    padding: 20px 20px;
     transition: all ease-in-out 0.3s;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
@@ -887,17 +878,18 @@ section {
         .services .icon-box h4 a {
             color: #191919;
         }
+
     .services .icon-box h5 {
         font-weight: 400;
         margin-bottom: 4px;
         font-size: 16px;
-        font-style:italic;
+        font-style: italic;
     }
+
     .services .icon-box h6 {
         font-weight: 500;
         margin-bottom: 10px;
         font-size: 14px;
-     
     }
 
     .services .icon-box p {
@@ -905,15 +897,16 @@ section {
         font-size: 14px;
         margin-bottom: 0;
     }
-    .services .icon-box ul {
-      
-       left:0;
 
-    } .services .icon-box li {
+    .services .icon-box ul {
+        left: 0;
+    }
+
+    .services .icon-box li {
         line-height: 24px;
         font-size: 14px;
         margin-bottom: 5px;
-        text-align:left;
+        text-align: left;
     }
 
     .services .icon-box:hover {
@@ -936,15 +929,15 @@ section {
 
         .services .icon-box:hover h4 a, .services .icon-box:hover p {
             color: #fff;
-            
+        }
 
-        } .services .icon-box:hover h5 {
+        .services .icon-box:hover h5 {
             color: #efefef;
+        }
 
-        }.services .icon-box:hover li a {
+        .services .icon-box:hover li a {
             color: #fff;
-            font-weight:600;
-            
+            font-weight: 600;
         }
 
 /*--------------------------------------------------------------
@@ -1267,38 +1260,35 @@ section {
     text-align: center;
     box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
     padding: 20px 0 30px 0;
-    
-}.contact .row {
+}
+
+.contact .row {
     color: #444444;
     display: flex;
     justify-content: space-around;
-    
-    
-  
-    
 }
 
-    .contact .info-box i {
-        font-size: 32px;
-        color: #cf751b;
-        border-radius: 50%;
-        padding: 8px;
-        border: 2px dotted #f5a0a0;
-    }
+.contact .info-box i {
+    font-size: 32px;
+    color: #cf751b;
+    border-radius: 50%;
+    padding: 8px;
+    border: 2px dotted #f5a0a0;
+}
 
-    .contact .info-box h3 {
-        font-size: 20px;
-        color: #777777;
-        font-weight: 700;
-        margin: 10px 0;
-    }
+.contact .info-box h3 {
+    font-size: 20px;
+    color: #777777;
+    font-weight: 700;
+    margin: 10px 0;
+}
 
-    .contact .info-box p {
-        padding: 0;
-        line-height: 24px;
-        font-size: 14px;
-        margin-bottom: 0;
-    }
+.contact .info-box p {
+    padding: 0;
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
 
 .contact .php-email-form {
     box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
@@ -1446,19 +1436,15 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
     padding-top: 0px;
-   
 }
 
     .portfolio-details .portfolio-details-container {
-        position: relative ;
-        
+        position: relative;
     }
 
     .portfolio-details .portfolio-details-carousel {
         position: relative;
         z-index: 1;
-
-        
     }
 
         .portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
@@ -1516,7 +1502,6 @@ section {
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 80px;
-            
         }
 
         .portfolio-details .portfolio-description p {
@@ -1690,4 +1675,3 @@ section {
         margin: -20px 0 30px 0;
     }
 }
-

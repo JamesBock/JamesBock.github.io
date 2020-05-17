@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Drug Interaction Project</title>
+  <title>Clinical Compounding Project</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -45,12 +45,14 @@
                 <i class="icofont-phone"></i> 412-613-6129
             </div>
             <div class="social-links">
-                <a href="#" class="facebook"><i class="icofont-github"></i></a>
-                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
-                <a href="#" class="skype"><i class="icofont-runner"></i></a>
-                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="icofont-brand-playstation"></i></a>
-                <a href="#" class="linkedin"><i class="icofont-brand-steam"></i></a>
+                <div class="social-links">
+                    <a href="https://github.com/JamesBock/" target="_blank"><i class="icofont-github"></i></a>
+                    <a href="https://www.linkedin.com/in/james-bock-94886817/" target="_blank"><i class="icofont-linkedin"></i></a>
+                    <a href="https://www.strava.com/athletes/34465539" target="_blank"><i class="icofont-runner"></i></a>
+                    <a href="https://www.instagram.com/jamesisfast/" target="_blank"><i class="icofont-instagram"></i></a>
+                    <a href="https://my.playstation.com/profile/Honus_Swagner" target="_blank"><i class="icofont-brand-playstation"></i></a>
+                    <a href="http://steamcommunity.com/id/Honus_Swagner/" target="_blank"><i class="icofont-brand-steam"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -95,9 +97,9 @@
 
                 <ol>
                     <li><a href="index.html">Home</a></li>
-                    <li>Drug Interactions</li>
+                    <li>Clinical Compounding</li>
                 </ol>
-                <h2>Drug Interactions</h2>
+                <h2>Clinical Compounding</h2>
 
             </div>
         </section><!-- End Breadcrumbs -->
@@ -108,34 +110,37 @@
                 <div class="portfolio-details-container">
 
                     <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/DrugInteractiondemoClip.gif" style="width:auto" class="img-fluid" alt="">
-                        <img src="assets/img/InteractionDetails.png" style="width:auto" class="img-fluid" alt="">
-                        <img src="assets/img/InteractionPhone.gif" style="width:auto; height:700px; justify-content:center" class="img-fluid" alt="">
+                        <img src="assets/img/AminoMax.gif" style="width:auto" class="img-fluid" alt="">
+                        <img src="assets/img/PolicyScrollUnitChange.gif" style="width:auto" class="img-fluid" alt="">
+                        
                     </div>
 
                     <div class="portfolio-info">
                         <h3>Project Summary</h3>
                         <ul>
-                            <li><strong>Tech</strong>: C#, Blazor, HTML, CSS, FHIR, REST API</li>
-                            <li><strong>Libraries</strong>: Bootstrap, MediatR, Hl7, NewtonsSoft, MatBlazor</li>
-                            <li><strong>Techniques</strong>: Dependency injection, Channels, Asynchrony </li>
-                            <li><strong>Start date</strong>: March, 2020</li>
-                            <li><strong>Project URL</strong>: <a href="#">blog coming soon!</a></li>
+                            <li><strong>Tech</strong>: C#, UWP, SQL </li>
+                            <li><strong>Libraries</strong>: ReactiveUI, Dynamic Data, MediatR, Stateless, Entity Framework Core</li>
+                            <li><strong>Techniques</strong>: Reactive Programming, Dependency Injection </li>
+                            <li><strong>Start date</strong>: July, 2019</li>
+                            <!--<li><strong>Project URL</strong>: <a href="#">blog coming soon!</a></li>-->
                         </ul>
                     </div>
 
                 </div>
 
                 <div class="portfolio-description">
-                    <h2>Drug Interaction Module</h2>
+                    <h2>Clinical Compounding </h2>
                     <p>
-                        This project started as as experiment with learning Blazor and grew into a practical tool that can be used in clinical and consumer settings. 
+                        This project is a solution for a problem I encountered while working as Dietitian in a NICU. Ordering intravenous nutrition was still being written on paper forms and being faxed to place the order. I collected data for months on errors made during the process, and determined that over 90-95% of them could have been corrected with basic Clinical Decision Support.
                     </p>
                     <p>
-                        The module is designed with the use-case of an e-health record pinging the module with a patient ID that can be used to retrive the medications the patient is taking. The module then gathers the proper data, converts it into a readable form for the National Library of Medicine's Drug Interaction API, and parses the information returned from the API. Once the interactions are parsed, they must be connected with the order the prescriber wrote so modifications can be made if necessary based on the interactions.
+                        When the prescriber goes to place an order, the system evaluates the contents of the order in terms of Ingredients (i.e. the constituents of the order, like Sodium Chloride or an Amino Acid Solution like Trophamine) and Factors (the constituents of the Ingredients, like sodium or total amino acids). The program contextualizes those constituents in terms of the Policies the prescriber's facility has set and chooses the most appropriate control for ordering each ingredient. As of now, Policies represent minimums, maximums and a recommended range that can be set in the context of the patient, a specified duration, an order, or another Factor. As the user manipulates the Ingredient amounts, the program continually assesses these Policies and gives feedback to the prescriber through the controls.
                     </p>
                     <p>
-                        As shown above, the interface is adaptive so it can be accessed on mobile devices if desired.
+                        As shown above in the first image, this is shown when one Ingredient, containing the Factor Amino Acids, increases and the control of another Ingredient containing Amino Acids is modulated to reduce the amount of that Ingredient which is available for ordering to conform with the Policies. Once the Policy maximum is reached (in this case, the Policy with the lowest threshold is 5 grams per kilogram of body weight), no Ingredient containing that Factor can be increased until one of the Ingredients is decreased to prevent overordering. While all of this is happening, the totals of all Factors in the Order are updated in real time in the first column to the right and the second column is a summary of the amount the patient is receiving of each Factor across all Orders. The second column is time-adjusted and forward-looking, meaning if the Order is being placed at noon but won't be given to the patient until 10PM, the system displays amounts from Orders that will be active at 10PM and projects through the duration of the Order. Functionality will be added for backward-looking aggregation as well.
+                    </p>
+                    <p>
+                        Image two is zoomed in to one of the Ingredient controls. Each control displays a scrollable list of all the Policies that are applied to the control for the prescriber's reference. The list is generated with specificity to the Patient's "Type" (e.g. Early Neonate, Pediatric, Older Adult, etc...) and the administration route of the medication. Disease state specific Policies are currently in development. The Factor's display units can be changed to conform to a given Policy by double-clicking on the item to cycle through Policies for that factor. This functionality is also available in the summary columns. Once the prescriber is happy with all of the components, the Order is sent via FHIR/HL7 to the EHR and the compounder, if appropriate.
                     </p>
                 </div>
 
@@ -210,12 +215,12 @@
                                 <i class="icofont-phone"></i> 412-613-6129
                             </div>-->
                             <div class="social-links">
-                                <a href="#" class="facebook"><i class="icofont-github"></i></a>
-                                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
-                                <a href="#" class="skype"><i class="icofont-runner"></i></a>
-                                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-                                <a href="#" class="linkedin"><i class="icofont-brand-playstation"></i></a>
-                                <a href="#" class="linkedin"><i class="icofont-brand-steam"></i></a>
+                                <a href="https://github.com/JamesBock/" target="_blank"><i class="icofont-github"></i></a>
+                                <a href="https://www.linkedin.com/in/james-bock-94886817/" target="_blank"><i class="icofont-linkedin"></i></a>
+                                <a href="https://www.strava.com/athletes/34465539" target="_blank"><i class="icofont-runner"></i></a>
+                                <a href="https://www.instagram.com/jamesisfast/" target="_blank"><i class="icofont-instagram"></i></a>
+                                <a href="https://my.playstation.com/profile/Honus_Swagner" target="_blank"><i class="icofont-brand-playstation"></i></a>
+                                <a href="http://steamcommunity.com/id/Honus_Swagner/" target="_blank"><i class="icofont-brand-steam"></i></a>
                             </div>
                         </div>
                         <div class="copyright">
