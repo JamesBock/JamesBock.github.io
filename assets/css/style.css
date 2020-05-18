@@ -165,7 +165,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .custom_overlay:hover {
         opacity: 1;
-
     }
 
 .custom_overlay_inner {
@@ -628,8 +627,8 @@ h1, h2, h3, h4, h5, h6 {
     #hero.hero-scrolled h1 {
         opacity: 0;
         transition: 0.1s;
-
     }
+
     #hero.hero-scrolled h1, #hero.hero-scrolled h2, #hero.hero-scrolled h3, #hero.hero-scrolled .btn-get-started {
         opacity: 0;
         transition: ease-in-out 0.4s;
@@ -656,8 +655,8 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 56px;
         text-transform: uppercase;
         color: #fff;
-        opacity:100;
-        transition: ease-in  0.4s;
+        opacity: 100;
+        transition: ease-in 0.4s;
     }
 
     #hero h2 {
@@ -1350,18 +1349,58 @@ section {
     z-index: 1;
 }
 
-    .profile-carousel .img {
+    .profile-carousel .owl-nav .owl-prev,
+    .profile-carousel .owl-nav .owl-next,
+    .profile-carousel .owl-dot {
+        font-family: 'fontAwesome';
+    }
+
+.owl-nav {
+}
+
+.owl-prev {
+    position: absolute;
+    top: 275px;
+    left: 0;
+    height: 550px;
+    width: 60px;
+    text-align: center;
+    transform: translateY(-50%);
+  
+}
+
+.owl-next {
+    position: absolute;
+    top: 275px;
+    right: 0;
+    height: 550px;
+    width: 60px;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.owl-prev:focus {
+    outline: 0;
+    border: 0;
+
+}
+
+.owl-next:focus {
+    outline: 0;
+    border: 0;
+}
+/*.profile-carousel img {
         padding: 50px 30px;
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         transition: all ease-in-out 0.3s;
         height: 100%;
     }
 
-        .profile-carousel .img:hover {
+        .profile-carousel img:hover {
             background: #ffffff;
             padding: 30px 30px 70px 30px;
             box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
-        }
+        }*/
 
 .portfolio-details .profile-carousel .owl-nav, .portfolio-details .profile-carousel .owl-dots {
     margin-top: 5px;
