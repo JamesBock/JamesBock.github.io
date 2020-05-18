@@ -117,18 +117,21 @@
 
     // Toggle .header-scrolled class to #header when page is scrolled
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 270) {
+        if ($(this).scrollTop() > 260) {
             $('#header').addClass('header-scrolled');
             $('#topbar').addClass('topbar-scrolled');
+            $('#hero').addClass('hero-scrolled');
         } else {
             $('#header').removeClass('header-scrolled');
             $('#topbar').removeClass('topbar-scrolled');
+            $('#hero').removeClass('hero-scrolled');
         }
     });
 
-    if ($(window).scrollTop() > 270) {
+    if ($(window).scrollTop() > 260) {
         $('#header').addClass('header-scrolled');
         $('#topbar').addClass('topbar-scrolled');
+        $('#hero').addClass('hero-scrolled');
     }
 
     // Back to top button
@@ -169,14 +172,31 @@
         });
     });
 
-    // Portfolio details carousel
-    $(".portfolio-details-carousel").owlCarousel({
+  
+    $(".profile-carousel").owlCarousel({
         //autoplay: true,
         lazyLoad:true,
         touchDrag: true,
         dots: true,
         loop: true,
-        items: 1
+        //items: 1,
+        margin: 5,
+        center: true,
+        autoWidth: true,
+        responsive: {
+            0: {
+                items:1
+            },
+            600: {
+                items:2
+            },
+            1000: {
+                itemes:3
+            }
+        }
+    
+
+        
     });
 
     // Initi AOS

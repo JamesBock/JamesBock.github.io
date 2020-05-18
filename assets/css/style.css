@@ -110,6 +110,31 @@ h1, h2, h3, h4, h5, h6 {
         transition-delay: 0 !important;
     }
 }
+
+
+/*--------------------------------------------------------------
+# Center for photos
+--------------------------------------------------------------*/
+.center-cropped {
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 550px;
+    width: auto;
+    overflow: hidden;
+}
+
+@media only screen and ( max-width: 599px ) {
+    .center-cropped {
+        object-fit: none; /* Do not scale the image */
+        object-position: center; /* Center the image within the element */
+        height: 100%;
+        max-width: 375px;
+        overflow: hidden;
+    }
+}
+/*--------------------------------------------------------------
+# end photos
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # overlay
 --------------------------------------------------------------*/
@@ -120,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .custom_overlay_wrapper img {
         /*width:auto;*/
-        max-height: 600px;
+        max-height: 550px;
     }
 
 .custom_overlay {
@@ -173,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------- TABLET ------------------*/
 @media only screen and ( min-width: 600px ) and ( max-width: 999px ) {
     .custom_overlay h4 {
-        /*font-size: 90%;*/
+        font-size: 90%;
     }
 
     .custom_overlay p {
@@ -189,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .custom_overlay p {
-        font-size: 100%;
+        font-size: 85%;
     }
 }
 /*--------------------------------------------------------------
@@ -341,6 +366,18 @@ h1, h2, h3, h4, h5, h6 {
         padding: 15px 0;
         background: transparent;
     }
+
+        #header.header-scrolled h1 a {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            color: #fff;
+            padding: 0;
+            line-height: 56px;
+            font-weight: 700;
+            letter-spacing: normal;
+            text-transform: uppercase;
+            visibility: visible;
+        }
 
         #header .logo {
             font-size: 28px;
@@ -584,7 +621,18 @@ h1, h2, h3, h4, h5, h6 {
     background: url("../img/hero-bg.jpg") top center;
     background-size: cover;
     position: relative;
+    /*transition: all 0.9s;*/
 }
+
+    #hero.hero-scrolled h1 {
+        opacity: 0;
+        transition: 0.1s;
+
+    }
+    #hero.hero-scrolled h1, #hero.hero-scrolled h2, #hero.hero-scrolled h3, #hero.hero-scrolled .btn-get-started {
+        opacity: 0;
+        transition: ease-in-out 0.4s;
+    }
 
     #hero:before {
         content: "";
@@ -607,18 +655,22 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 56px;
         text-transform: uppercase;
         color: #fff;
+        opacity:100;
+        transition: ease-in  0.4s;
     }
 
     #hero h2 {
         color: #eee;
         margin-bottom: 20px;
         font-size: 24px;
+        transition: ease-in-out 0.4s
     }
 
     #hero h3 {
         color: #eee;
         margin-bottom: 25px;
         font-size: 22px;
+        transition: ease-in-out 0.4s
     }
 
     #hero .btn-get-started {
@@ -629,9 +681,9 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: 0.5px;
         display: inline-block;
         padding: 10px 28px;
-        transition: 0.5s;
         border: 2px solid #fff;
         color: #fff;
+        transition: ease-in-out 0.4s
     }
 
         #hero .btn-get-started:hover {
@@ -941,44 +993,6 @@ section {
         }
 
 /*--------------------------------------------------------------
-# Cta
---------------------------------------------------------------*/
-.cta {
-    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
-    background-size: cover;
-    padding: 120px 0;
-}
-
-    .cta h3 {
-        color: #fff;
-        font-size: 28px;
-        font-weight: 700;
-    }
-
-    .cta p {
-        color: #fff;
-    }
-
-    .cta .cta-btn {
-        font-family: "Raleway", sans-serif;
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 14px;
-        letter-spacing: 1px;
-        display: inline-block;
-        padding: 10px 28px;
-        transition: 0.5s;
-        margin-top: 10px;
-        border: 2px solid #fff;
-        color: #fff;
-    }
-
-        .cta .cta-btn:hover {
-            background: #cf751b;
-            border: 2px solid #cf751b;
-        }
-
-/*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio #portfolio-flters {
@@ -1082,121 +1096,6 @@ section {
         opacity: 1;
         bottom: 20px;
     }
-
-/*--------------------------------------------------------------
-# Pricing
---------------------------------------------------------------*/
-.pricing .box {
-    padding: 20px;
-    background: #f9f9f9;
-    text-align: center;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-}
-
-    .pricing .box h3 {
-        font-weight: 400;
-        padding: 15px;
-        font-size: 18px;
-        text-transform: uppercase;
-        font-weight: 600;
-        color: #191919;
-    }
-
-    .pricing .box h4 {
-        font-size: 42px;
-        color: #cf751b;
-        font-weight: 500;
-        font-family: "Open Sans", sans-serif;
-        margin-bottom: 20px;
-    }
-
-        .pricing .box h4 sup {
-            font-size: 20px;
-            top: -15px;
-            left: -3px;
-        }
-
-        .pricing .box h4 span {
-            color: #bababa;
-            font-size: 16px;
-            font-weight: 300;
-        }
-
-    .pricing .box ul {
-        padding: 0;
-        list-style: none;
-        color: #191919;
-        text-align: center;
-        line-height: 20px;
-        font-size: 14px;
-    }
-
-        .pricing .box ul li {
-            padding-bottom: 16px;
-        }
-
-        .pricing .box ul i {
-            color: #cf751b;
-            font-size: 18px;
-            padding-right: 4px;
-        }
-
-        .pricing .box ul .na {
-            color: #ccc;
-            text-decoration: line-through;
-        }
-
-    .pricing .box .btn-wrap {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .pricing .box .btn-buy {
-        background: #cf751b;
-        display: inline-block;
-        padding: 10px 40px;
-        color: #fff;
-        transition: none;
-        font-size: 14px;
-        font-weight: 400;
-        font-family: "Raleway", sans-serif;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-
-        .pricing .box .btn-buy:hover {
-            background: #3c3e82;
-        }
-
-.pricing .featured {
-    background: #cf751b;
-    box-shadow: none;
-    color: #fff;
-}
-
-    .pricing .featured h3, .pricing .featured h4, .pricing .featured ul, .pricing .featured ul li, .pricing .featured ul .na {
-        color: #fff;
-    }
-
-        .pricing .featured h4 span {
-            color: rgba(255, 255, 255, 0.58);
-        }
-
-    .pricing .featured .btn-wrap {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .pricing .featured .btn-buy {
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-        .pricing .featured .btn-buy:hover {
-            background: #fff;
-            color: #cf751b;
-        }
 
 /*--------------------------------------------------------------
 # Team
@@ -1431,10 +1330,11 @@ section {
             content: "/";
         }
 
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.portfolio-details {
+/*.portfolio-details {
     padding-top: 0px;
 }
 
@@ -1442,71 +1342,85 @@ section {
         position: relative;
     }
 
-    .portfolio-details .portfolio-details-carousel {
-        position: relative;
-        z-index: 1;
-    }
+    .portfolio-details*/
 
-        .portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
-            margin-top: 5px;
-            text-align: left;
-        }
+.profile-carousel {
+    position: relative;
+    z-index: 1;
+}
 
-        .portfolio-details .portfolio-details-carousel .owl-dot {
-            display: inline-block;
-            margin: 0 10px 0 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ddd !important;
-        }
-
-            .portfolio-details .portfolio-details-carousel .owl-dot.active {
-                background-color: #cf751b !important;
-            }
-
-    .portfolio-details .portfolio-info {
-        padding: 30px;
-        position: absolute;
-        right: 0;
-        bottom: -110px;
-        background: #fff;
+    .profile-carousel .img {
+        padding: 50px 30px;
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-        z-index: 2;
+        transition: all ease-in-out 0.3s;
+        height: 100%;
     }
 
-        .portfolio-details .portfolio-info h3 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+        .profile-carousel .img:hover {
+            background: #ffffff;
+            padding: 30px 30px 70px 30px;
+            box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
         }
 
-        .portfolio-details .portfolio-info ul {
-            list-style: none;
-            padding: 0;
-            font-size: 15px;
-        }
+.portfolio-details .profile-carousel .owl-nav, .portfolio-details .profile-carousel .owl-dots {
+    margin-top: 5px;
+    text-align: left;
+}
 
-            .portfolio-details .portfolio-info ul li + li {
-                margin-top: 10px;
-            }
+.portfolio-details .profile-carousel .owl-dot {
+    margin: 0 10px 0 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd !important;
+}
 
-    .portfolio-details .portfolio-description {
-        padding-top: 3%;
+    .portfolio-details .profile-carousel .owl-dot.active {
+        background-color: #cf751b !important;
     }
 
-        .portfolio-details .portfolio-description h2 {
-            width: 50%;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 80px;
+.portfolio-details .portfolio-info {
+    padding: 30px;
+    position: absolute;
+    right: 0;
+    bottom: -110px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+    .portfolio-details .portfolio-info h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .portfolio-details .portfolio-info ul {
+        list-style: none;
+        padding: 0;
+        font-size: 15px;
+    }
+
+        .portfolio-details .portfolio-info ul li + li {
+            margin-top: 10px;
         }
 
-        .portfolio-details .portfolio-description p {
-            padding: 0 0 0 0;
-        }
+.portfolio-details .portfolio-description {
+    padding-top: 3%;
+}
+
+    .portfolio-details .portfolio-description h2 {
+        width: 50%;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 80px;
+    }
+
+    .portfolio-details .portfolio-description p {
+        padding: 0 0 0 0;
+    }
 
 @media (max-width: 768px) {
     .portfolio-details .portfolio-info {
