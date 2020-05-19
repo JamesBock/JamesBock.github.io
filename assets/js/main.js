@@ -192,9 +192,17 @@
       aos_init();
     });
 
-    // Initiate venobox (lightbox feature used in portofilo)
+    // Initiate venobox
     $(document).ready(function () {
-      $(".venobox").venobox();
+      $(".venobox").venobox({
+        share: [],
+        spinner: "double-bounce",
+        spinColor: "#cf751b",
+        arrowsColor: "#cf751b",
+        closeColor: "#cf751b",
+        infinigall: true,
+        frameHeight:"auto"
+      });
     });
   });
 

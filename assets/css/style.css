@@ -629,7 +629,7 @@ h1, h2, h3, h4, h5, h6 {
         transition: 0.1s;
     }
 
-    #hero.hero-scrolled h1, #hero.hero-scrolled h2, #hero.hero-scrolled h3, #hero.hero-scrolled .btn-get-started {
+    #hero.hero-scrolled h1, #hero.hero-scrolled h2, #hero.hero-scrolled h3, #hero.hero-scrolled .btn-meet-me {
         opacity: 0;
         transition: ease-in-out 0.4s;
     }
@@ -673,7 +673,7 @@ h1, h2, h3, h4, h5, h6 {
         transition: ease-in-out 0.4s
     }
 
-    #hero .btn-get-started {
+    #hero .btn-meet-me {
         font-family: "Raleway", sans-serif;
         text-transform: uppercase;
         font-weight: 500;
@@ -686,7 +686,7 @@ h1, h2, h3, h4, h5, h6 {
         transition: ease-in-out 0.4s
     }
 
-        #hero .btn-get-started:hover {
+        #hero .btn-meet-me:hover {
             background: #cf751b;
             border-color: #cf751b;
         }
@@ -803,31 +803,31 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
-.why-us {
+.education {
     padding-top: 50px;
 }
 
-    .why-us .box {
+    .education .box {
         padding: 50px 30px;
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         transition: all ease-in-out 0.3s;
-        height: 100%;
+        height: 435px;
     }
 
-        .why-us .box span {
+        .education .box span {
             display: block;
             font-size: 22px;
             font-weight: 700;
             color: #3c3e82;
         }
 
-        .why-us .box img {
+        .education .box img {
             margin-bottom: 20px;
             padding-left: 20%;
             padding-right: 20%;
         }
 
-        .why-us .box h4 {
+        .education .box h4 {
             font-size: 100%;
             font-weight: 600;
             padding: 0;
@@ -835,32 +835,33 @@ section {
             color: #191919;
         }
 
-        .why-us .box p {
+        .education .box p {
             color: #aaaaaa;
             font-size: 15px;
             margin: 0;
             padding: 0;
         }
 
-        .why-us .box:hover {
+        .education .box:hover {
             background: #ffffff;
-            padding: 30px 30px 70px 30px;
+            padding: 30px 30px 50px 30px;
+            margin-top : -30px ;
+           
             box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+            
         }
 
-            .why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p {
-            }
-
+   
 /*--------------------------------------------------------------
-# Clients
+# languages
 --------------------------------------------------------------*/
-.clients {
+.languages {
     background: #f2f2f2;
     padding: 15px 0;
     text-align: center;
 }
 
-    .clients img {
+    .languages img {
         width: 50%;
         -webkit-filter: grayscale(100);
         filter: grayscale(100);
@@ -869,29 +870,29 @@ section {
         padding: 15px 0;
     }
 
-        .clients img:hover {
+        .languages img:hover {
             -webkit-filter: none;
             filter: none;
             transform: scale(1.2);
         }
 
 @media (max-width: 768px) {
-    .clients img {
+    .languages img {
         width: 40%;
     }
 }
 
 /*--------------------------------------------------------------
-# Services
+# experience
 --------------------------------------------------------------*/
-.services .icon-box {
+.experience .icon-box {
     text-align: center;
     padding: 20px 20px;
     transition: all ease-in-out 0.3s;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-    .services .icon-box .icon {
+    .experience .icon-box .icon {
         margin: 0 auto;
         width: 64px;
         height: 64px;
@@ -904,12 +905,12 @@ section {
         transform-style: preserve-3d;
     }
 
-        .services .icon-box .icon i {
+        .experience .icon-box .icon i {
             color: #fff;
             font-size: 28px;
         }
 
-        .services .icon-box .icon::before {
+        .experience .icon-box .icon::before {
             position: absolute;
             content: '';
             left: -8px;
@@ -921,73 +922,75 @@ section {
             transform: translateZ(-1px);
         }
 
-    .services .icon-box h4 {
+    .experience .icon-box h4 {
         font-weight: 600;
         margin-bottom: 8px;
         font-size: 22px;
     }
 
-        .services .icon-box h4 a {
+        .experience .icon-box h4 a {
             color: #191919;
         }
 
-    .services .icon-box h5 {
+    .experience .icon-box h5 {
         font-weight: 400;
         margin-bottom: 4px;
         font-size: 16px;
         font-style: italic;
     }
 
-    .services .icon-box h6 {
+    .experience .icon-box h6 {
         font-weight: 500;
         margin-bottom: 10px;
         font-size: 14px;
     }
 
-    .services .icon-box p {
+    .experience .icon-box p {
         line-height: 24px;
         font-size: 14px;
         margin-bottom: 0;
     }
 
-    .services .icon-box ul {
+    .experience .icon-box ul {
         left: 0;
     }
 
-    .services .icon-box li {
+    .experience .icon-box li {
         line-height: 24px;
         font-size: 14px;
         margin-bottom: 5px;
         text-align: left;
     }
 
-    .services .icon-box:hover {
+    .experience .icon-box:hover {
         background: #cf751b;
         border-color: #cf751b;
-        padding: 30px 20px 50px 20px;
+        padding: 20px 20px 20px 20px;
+        margin-bottom: 20px;
+        margin-top: -20px;
     }
 
-        .services .icon-box:hover .icon {
+        .experience .icon-box:hover .icon {
             background: #fff;
         }
 
-            .services .icon-box:hover .icon i {
+            .experience .icon-box:hover .icon i {
                 color: #cf751b;
             }
 
-            .services .icon-box:hover .icon::before {
+            .experience .icon-box:hover .icon::before {
                 background: #805219;
             }
 
-        .services .icon-box:hover h4 a, .services .icon-box:hover p {
+        .experience .icon-box:hover h4 a, .experience .icon-box:hover p {
             color: #fff;
         }
 
-        .services .icon-box:hover h5 {
+        .experience .icon-box:hover h5 {
             color: #efefef;
         }
 
-        .services .icon-box:hover li a {
+        .experience .icon-box:hover li a {
             color: #fff;
             font-weight: 600;
         }
@@ -1334,7 +1337,7 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-/*.portfolio-details {
+.portfolio-details {
     padding-top: 0px;
 }
 
@@ -1342,7 +1345,7 @@ section {
         position: relative;
     }
 
-    .portfolio-details*/
+ 
 
 .profile-carousel {
     position: relative;
