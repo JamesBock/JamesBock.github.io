@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
         .back-to-top i:hover {
-            background: #e72323;
+            background: #cf751b;
             color: #fff;
         }
 
@@ -1402,10 +1402,10 @@ section {
             box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
         }*/
 
-.portfolio-details .profile-carousel .owl-nav, .portfolio-details .profile-carousel .owl-dots {
+/* .portfolio-details .profile-carousel .owl-nav, .portfolio-details .profile-carousel .owl-dots {
     margin-top: 5px;
     text-align: left;
-}
+} */
 
 .portfolio-details .profile-carousel .owl-dot {
     margin: 0 10px 0 0;
