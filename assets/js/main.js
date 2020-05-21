@@ -263,6 +263,8 @@
       once: false,
     });
   }
-
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
   aos_init();
 })(jQuery);
