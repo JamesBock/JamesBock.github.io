@@ -5,7 +5,7 @@
  * License: https://bootstrapmade.com/license/
  */
 (function (global) {
-    localStorage.setItem("theme", document.getElementById("cssTheme").href );
+    sessionStorage.setItem("theme", document.getElementById("cssTheme").href );
 }(window));
 
 !(function (q) {
@@ -31,15 +31,15 @@
     },
 
     click: function (e) {
-        localStorage.setItem("theme", e.target.id);
+        sessionStorage.setItem("theme", e.target.id);
 
       document.getElementById("cssTheme").href = e.target.id;
     },
   });
 
   q("#header").on("mouseleave", function (e) {
-    if (document.getElementById("cssTheme").href !== localStorage.theme) {
-      document.getElementById("cssTheme").href = localStorage.theme;
+    if (document.getElementById("cssTheme").href !== sessionStorage.theme) {
+      document.getElementById("cssTheme").href = sessionStorage.theme;
     }
   });
 
