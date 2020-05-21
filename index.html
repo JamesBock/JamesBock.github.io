@@ -1,20 +1,36 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- <script>
+      function ChangeTheme() {
+        if (document.getElementById("themeButton").innerText === "Hook 'em") {
+          document
+            .getElementById("cssTheme")
+            .setAttribute("href", "assets/css/graffiti.css");
+          document.getElementById("themeButton").innerText = "Graffiti Park";
+          console.log(true);
+        } else {
+          document.getElementById("cssTheme").href = "assets/css/hookem.css";
+          document.getElementById("themeButton").innerText = "Hook 'em";
+          console.log(false);
+        }
+      }
+    </script> -->
+   
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>James Bock - Healthcare Developer</title>
+    <title id="webTitle">James Bock - Healthcare Developer</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="assets/vendor/icofont/icofont-medical-sign" rel="icon" />
+    <link href="" rel="icon" />
     <link href="assets/img/BigHearts.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Sedgwick Ave Display:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
 
@@ -33,7 +49,7 @@
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link id="cssTheme" href="assets/css/hookem.css" rel="stylesheet" />
 
     <!-- =======================================================
     * Template Name: Day - v2.0.0
@@ -107,13 +123,35 @@
             </li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
-
             <li><a href="#contact">Contact</a></li>
+            
+            <li class="drop-down"><a href="">Theme</a>
+              <ul id="themeDrop">
+                <li>
+                  <a id="assets/css/hookem.css">Hook 'em</a>
+                </li>
+                <li>
+                  <a id="assets/css/graffiti.css">Graffiti Park</a>
+                </li>
+                <!-- <li>
+                  <a id="Undefined">Undefined</a>
+                </li> -->
+              </ul>
+            </div>
+            <!-- <li>
+              <a href=""
+                >Theme:
+                <button type="button" onclick="ChangeTheme();" id="themeButton">
+                  Hook 'em
+                </button></a
+              >
+            </li> -->
           </ul>
         </nav>
         <!-- .nav-menu -->
       </div>
     </header>
+    
     <!-- End Header -->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
@@ -129,6 +167,7 @@
         </h2>
         <a href="#about" class="btn-meet-me scrollto">Meet me</a>
       </div>
+      
     </section>
     <!-- End Hero -->
 
@@ -313,8 +352,8 @@
                 <li>
                   <p>
                     <i class="icofont-runner"> </i>
-                    Outside of my career goals, I love running, cooking, making beer, and
-                    video games.
+                    Outside of my career goals, I love running, cooking, making
+                    beer, and video games.
                   </p>
                 </li>
               </ul>
@@ -1088,6 +1127,8 @@
     <script src="assets/vendor/aos/aos.js"></script>
 
     <!-- Template Main JS File -->
+    <script  src="assets/js/state.js"></script>
     <script src="assets/js/main.js"></script>
+  
   </body>
 </html>

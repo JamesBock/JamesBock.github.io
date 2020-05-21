@@ -1,9 +1,3 @@
-/**
-* Template Name: Day - v2.0.0
-* Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -14,7 +8,7 @@ body {
 }
 
 a {
-    color: #cf751b;
+    color: #3c3e;
 }
 
     a:hover {
@@ -23,7 +17,7 @@ a {
     }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Sedgwick Ave Display", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -44,13 +38,13 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 24px;
         width: 40px;
         height: 40px;
-        background: #cf751b;
+        background: #3c3e;
         color: #fff;
         transition: all 0.4s;
     }
 
         .back-to-top i:hover {
-            background: #cf751b;
+            background: #3c3e;
             color: #fff;
         }
 
@@ -73,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
         position: fixed;
         top: calc(50% - 30px);
         left: calc(50% - 30px);
-        border: 6px solid #cf751b;
+        border: 6px solid #3c3e;
         border-top-color: #efefef;
         border-radius: 50%;
         width: 60px;
@@ -187,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .custom_overlay h4:after {
-    background-color: #cf751b;
+    background-color: #3c3e;
     content: "";
     position: absolute;
     left: 0;
@@ -242,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
         }
 
     #topbar .contact-info i {
-        color: #cf751b;
+        color: #3c3e;
         padding-right: 4px;
     }
 
@@ -394,6 +388,8 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
+
 /* Desktop Navigation */
 .nav-menu ul {
     margin: 0;
@@ -423,7 +419,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu > ul > li:hover, .nav-menu .active {
-    background: #cf751b;
+    background: #3c3e;
 }
 
 .nav-menu .drop-down ul {
@@ -460,7 +456,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
     .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-        color: #cf751b;
+        color: #3c3e;
     }
 
 .nav-menu .drop-down > a:after {
@@ -612,6 +608,37 @@ h1, h2, h3, h4, h5, h6 {
         color: #fff;
     }
 
+
+    
+
+#themeDrop ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: none;
+}
+#themeDrop li {
+    padding: 10px;
+   
+  position: relative;
+  white-space: nowrap;
+  list-style: none;
+  transition: none;
+}
+
+#themeDrop .drop-down ul {
+  display: block;
+  position: absolute;
+  left: 0;
+ 
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  padding:  0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: none !important;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -687,8 +714,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
         #hero .btn-meet-me:hover {
-            background: #cf751b;
-            border-color: #cf751b;
+            background: #3c3e;
+            border-color: #3c3e;
         }
 
 @media (min-width: 1024px) {
@@ -793,7 +820,7 @@ section {
     .about .content ul i {
         font-size: 22px;
         padding-right: 4px;
-        color: #cf751b;
+        color: #3c3e;
     }
 
 .about .content p:last-child {
@@ -896,7 +923,7 @@ section {
         margin: 0 auto;
         width: 64px;
         height: 64px;
-        background: #cf751b;
+        background: #3c3e;
         transition: all .3s ease-out 0s;
         display: flex;
         align-items: center;
@@ -963,8 +990,8 @@ section {
     }
 
     .experience .icon-box:hover {
-        background: #cf751b;
-        border-color: #cf751b;
+        background: #3c3e;
+        border-color: #3c3e;
         padding: 20px 20px 20px 20px;
         margin-bottom: 20px;
         margin-top: -20px;
@@ -975,11 +1002,11 @@ section {
         }
 
             .experience .icon-box:hover .icon i {
-                color: #cf751b;
+                color: #3c3e;
             }
 
             .experience .icon-box:hover .icon::before {
-                background: #805219;
+                background: #146b0f;
             }
 
         .experience .icon-box:hover h4 a, .experience .icon-box:hover p {
@@ -1066,7 +1093,7 @@ section {
         }
 
             .portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
-                color: #cf751b;
+                color: #3c3e;
             }
 
         .portfolio .portfolio-item .portfolio-info .details-link {
@@ -1146,7 +1173,7 @@ section {
         }
 
             .team .member .social a:hover {
-                color: #cf751b;
+                color: #3c3e;
             }
 
         .team .member .social i {
@@ -1172,7 +1199,7 @@ section {
 
 .contact .info-box i {
     font-size: 32px;
-    color: #cf751b;
+    color: #3c3e;
     border-radius: 50%;
     padding: 8px;
     border: 2px dotted #f5a0a0;
@@ -1250,7 +1277,7 @@ section {
     }
 
         .contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
-            background-color: #cf751b;
+            background-color: #3c3e;
         }
 
     .contact .php-email-form input {
@@ -1262,7 +1289,7 @@ section {
     }
 
     .contact .php-email-form button[type="submit"] {
-        background: #cf751b;
+        background: #3c3e;
         border: 0;
         padding: 10px 24px;
         color: #fff;
@@ -1358,8 +1385,7 @@ section {
         font-family: 'fontAwesome';
     }
 
-.owl-nav {
-}
+
 
 .owl-prev {
     position: absolute;
@@ -1419,7 +1445,7 @@ section {
 }
 
     .portfolio-details .profile-carousel .owl-dot.active {
-        background-color: #cf751b !important;
+        background-color: #3c3e !important;
     }
 
 .portfolio-details .portfolio-info {
@@ -1490,7 +1516,7 @@ section {
             margin-bottom: 15px;
             background: #191919;
             color: #fff;
-            border-top: 4px solid #cf751b;
+            border-top: 4px solid #3c3e;
             text-align: center;
             padding: 30px 20px;
         }
@@ -1526,7 +1552,7 @@ section {
         }
 
             #footer .footer-top .social-links a:hover {
-                background: #cf751b;
+                background: #3c3e;
                 color: #fff;
                 text-decoration: none;
             }
@@ -1600,7 +1626,7 @@ section {
                 background: none;
                 font-size: 16px;
                 padding: 0 20px;
-                background: #cf751b;
+                background: #3c3e;
                 color: #fff;
                 transition: 0.3s;
                 border-radius: 4;
