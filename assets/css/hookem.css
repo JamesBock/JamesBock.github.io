@@ -256,7 +256,7 @@ h6 {
 }
 
 #topbar .social-links a:hover {
-  color: #fff;
+  color: #cf751b;
 }
 
 #topbar .social-links a:first-child {
@@ -277,7 +277,14 @@ h6 {
   top: 0;
   background: rgba(0, 0, 0, 0.9);
 }
-
+#header.header-scrolled .drop-down ul {
+   
+  background: #cf751b !important;
+}
+#header.header-scrolled .drop-down a:hover{
+   
+  color: #000000 !important;
+}
 #header .header-scrolled a {
   font-size: 28px;
   margin: 0;
@@ -314,7 +321,7 @@ h6 {
 
 #header.header-scrolled h1 a {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 44px;
   color: #fff;
   padding: 0;
   line-height: 56px;
@@ -673,7 +680,7 @@ h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
@@ -696,6 +703,10 @@ h6 {
   transition: ease-in-out 0.4s;
 }
 
+#hero span {
+
+  visibility: hidden;
+}
 #hero .btn-meet-me {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -747,6 +758,7 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  
 }
 
 .section-title {
@@ -799,9 +811,18 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
+.about .content {
+  
+  
+  border: 5px double #cf751b;
+  background-color: #ffffff;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
+  padding-top: 10px;
 }
 
 .about .content ul {
@@ -1052,7 +1073,12 @@ section {
 }
 
 .portfolio .portfolio-item {
-  margin-bottom: 30px;
+  
+  box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
+  transition: all ease-in-out 0.3s;
+  
+  border: 5px double #cf751b;
+  background-color: #ffffff;
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -1374,6 +1400,11 @@ section {
 .profile-carousel {
   position: relative;
   z-index: 1;
+  /* box-shadow: 0px 2px 15px rgba(245, 242, 242, 1); */
+  transition: all ease-in-out 0.3s;
+  border: 5px double #cf751b;
+  background-color: #ffffff;
+  padding-top: 3%;
 }
 
 .profile-carousel .owl-nav .owl-prev,

@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #585858;
 }
 em {
   color: linear-gradient(
@@ -33,6 +33,7 @@ a:hover {
 h1,
 h2,
 h3,
+span,
 /* h4, */
 h5,
 h6 {
@@ -175,6 +176,7 @@ h6 {
   bottom: 0;
   left: 0;
   right: 0;
+  color: #000;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.8);
   opacity: 0;
@@ -198,6 +200,7 @@ h6 {
 
 .custom_overlay h4 {
   position: relative;
+  font-weight: 300;
 }
 
 .custom_overlay p {
@@ -205,14 +208,13 @@ h6 {
   line-height: 1.4em;
   position: absolute;
   right: 50%;
+  font-weight: 300;
+  font-family: "Open Sans";
 }
 
 .custom_overlay h4:after {
-  background-color: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  );
+  background-color: rgb(90, 217, 231);
+
   content: "";
   position: absolute;
   left: 0;
@@ -223,7 +225,7 @@ h6 {
 /*------------------- TABLET ------------------*/
 @media only screen and (min-width: 600px) and (max-width: 999px) {
   .custom_overlay h4 {
-    font-size: 90%;
+    font-size: 125%;
   }
 
   .custom_overlay p {
@@ -267,11 +269,9 @@ h6 {
 }
 
 #topbar .contact-info i {
-  color: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  );
+  color:
+  rgb(60, 214, 248)
+   ;
   padding-right: 4px;
 }
 
@@ -288,7 +288,8 @@ h6 {
 }
 
 #topbar .social-links a:hover {
-  color: #fff;
+  color:  rgb(60, 214, 248)
+  ;
 }
 
 #topbar .social-links a:first-child {
@@ -308,6 +309,15 @@ h6 {
 #header.header-scrolled {
   top: 0;
   background: rgba(0, 0, 0, 0.9);
+}
+#header.header-scrolled .drop-down ul{
+  
+  background:  rgb(80, 189, 206) !important;
+}
+
+#header.header-scrolled .drop-down a:hover{
+   
+  color: #000000 !important;
 }
 
 #header .header-scrolled a {
@@ -349,13 +359,12 @@ h6 {
   color: #fff;
   padding: 0;
   line-height: 56px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: normal;
   text-transform: uppercase;
   visibility: visible;
   background: -webkit-linear-gradient(
     rgb(128, 6, 155),
-    
     rgb(248, 173, 60),
     rgb(60, 214, 248),
     rgb(60, 214, 248)
@@ -363,7 +372,6 @@ h6 {
   background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
- 
 }
 
 #header h1 {
@@ -451,9 +459,7 @@ h6 {
 
 .nav-menu > ul > li:hover,
 .nav-menu .active {
-  background: 
-    rgb(80, 189, 206)
-  ;
+  background: rgb(80, 189, 206);
 }
 
 .nav-menu .drop-down ul {
@@ -492,8 +498,7 @@ h6 {
 .nav-menu .drop-down ul a:hover,
 .nav-menu .drop-down ul .active > a,
 .nav-menu .drop-down ul li:hover > a {
-  color: 
-    rgb(90, 217, 231);
+  color: rgb(90, 217, 231);
 }
 
 .nav-menu .drop-down > a:after {
@@ -692,8 +697,13 @@ h6 {
   opacity: 0;
   transition: 0.1s;
 }
+#hero.hero-scrolled span {
+  opacity: 0;
+  transition: 0.1s;
+}
 
 #hero.hero-scrolled h1,
+#hero.hero-scrolled span,
 #hero.hero-scrolled h2,
 #hero.hero-scrolled h3,
 #hero.hero-scrolled .btn-meet-me {
@@ -716,14 +726,37 @@ h6 {
 }
 
 #hero h1 {
+  
   margin: 0 0 10px 0;
   font-size: 44px;
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #fff;
+  color: #000000;
   opacity: 100;
   transition: ease-in 0.4s;
+}
+#hero span {
+  position: absolute;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  color: #f4f4f4;
+  left: 14px;
+  right: 0;
+  
+  letter-spacing: normal;
+  text-transform: uppercase;
+  font-size: 44px;
+  background: -webkit-linear-gradient(
+    rgb(128, 6, 155),
+    rgb(248, 173, 60),
+    rgb(60, 214, 248),
+    rgb(60, 214, 248)
+  );
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 56px;
 }
 
 #hero h2 {
@@ -799,6 +832,7 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  background-color: rgba(47, 36, 30, 0.762);
 }
 
 .section-title {
@@ -806,10 +840,16 @@ section {
   padding: 30px 0;
   position: relative;
 }
+/* .section-title div {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+  background-color: #f5a0a0;
+} */
 
 .section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 46px;
+  font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
@@ -821,20 +861,31 @@ section {
 .section-title span {
   position: absolute;
   top: 30px;
+  font-weight: 700;
   color: #f4f4f4;
   left: 0;
   right: 0;
   z-index: 1;
-  font-weight: 700;
-  font-size: 52px;
+  letter-spacing: normal;
   text-transform: uppercase;
-  line-height: 0;
+  font-size: 46px;
+  background: -webkit-linear-gradient(
+    rgb(128, 6, 155),
+    rgb(248, 173, 60),
+    rgb(60, 214, 248),
+    rgb(60, 214, 248)
+  );
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 62px;
 }
 
 .section-title p {
   margin-bottom: 0;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  color: #ffffff;
 }
 
 @media (max-width: 575px) {
@@ -851,14 +902,24 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about .content {
+  box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
+  /* transition: all ease-in-out 0.3s; */
+  border: 5px solid #191919;
+  background-color: #ffffff;
+}
+
 .about .content h3 {
-  font-weight: 600;
+  font-weight: 100;
   font-size: 26px;
+  padding-top: 10px;
+  
 }
 
 .about .content ul {
   list-style: none;
   padding: 0;
+  border: #000;
 }
 
 .about .content ul li {
@@ -868,11 +929,9 @@ section {
 .about .content ul i {
   font-size: 22px;
   padding-right: 4px;
-  color: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  );
+  color: 
+  rgb(60, 214, 248)
+  ;
 }
 
 .about .content p:last-child {
@@ -880,7 +939,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Why Us
+# Education
 --------------------------------------------------------------*/
 .education {
   padding-top: 50px;
@@ -888,17 +947,18 @@ section {
 
 .education .box {
   padding: 50px 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
   transition: all ease-in-out 0.3s;
   height: 435px;
+  border: 5px solid #191919;
+  background-color: #ffffff;
 }
 
 .education .box span {
   display: block;
-  font-size: 22px;
-  font-weight: 700;
-  color: linear-gradient(rgb(90, 217, 231), rgb(248, 173, 60), rgb(248, 60, 60))
-    82;
+  font-size: 24px;
+  font-weight: 300;
+  color: #191919;
 }
 
 .education .box img {
@@ -927,7 +987,7 @@ section {
   padding: 30px 30px 50px 30px;
   margin-top: -30px;
 
-  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 10px 15px 30px rgba(245, 242, 242, 0.639);
 }
 
 /*--------------------------------------------------------------
@@ -966,8 +1026,10 @@ section {
 .experience .icon-box {
   text-align: center;
   padding: 20px 20px;
+  box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
   transition: all ease-in-out 0.3s;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border: 5px solid #191919;
+  background-color: #ffffff;
 }
 
 .experience .icon-box .icon {
@@ -1031,6 +1093,7 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: #191919;
 }
 
 .experience .icon-box ul {
@@ -1042,14 +1105,12 @@ section {
   font-size: 14px;
   margin-bottom: 5px;
   text-align: left;
+  color: #000;
 }
 
 .experience .icon-box:hover {
-  background: 
-    rgb(32, 142, 154)
-   ;
-  border-color: #ffffff
-  ;
+  background: rgb(32, 142, 154);
+  border-color: #ffffff;
   padding: 20px 20px 20px 20px;
   margin-bottom: 20px;
   margin-top: -20px;
@@ -1060,10 +1121,7 @@ section {
 }
 
 .experience .icon-box:hover .icon i {
-  color:  #e65225;
-   
-    
-  
+  color: #e65225;
 }
 
 .experience .icon-box:hover .icon::before {
@@ -1106,7 +1164,7 @@ section {
   color: #444444;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .portfolio #portfolio-flters li:hover,
@@ -1120,7 +1178,11 @@ section {
 }
 
 .portfolio .portfolio-item {
-  margin-bottom: 30px;
+  
+  box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
+  transition: all ease-in-out 0.3s;
+  border: 5px solid #191919;
+  background-color: #ffffff;
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -1130,6 +1192,7 @@ section {
   right: 30px;
   bottom: 0;
   z-index: 3;
+  border: 2px solid #000;
   transition: all ease-in-out 0.3s;
   background: rgba(255, 255, 255, 0.9);
   padding: 15px;
@@ -1262,7 +1325,10 @@ section {
 .contact .info-box {
   color: #444444;
   text-align: center;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
+  transition: all ease-in-out 0.3s;
+  border: 5px solid #191919;
+  background-color: #ffffff;
   padding: 20px 0 30px 0;
 }
 
@@ -1296,102 +1362,6 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
-}
-
-.contact .php-email-form {
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-  padding: 30px;
-}
-
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input::focus,
-.contact .php-email-form textarea::focus {
-  background-color: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  );
-}
-
-.contact .php-email-form input {
-  padding: 20px 15px;
-}
-
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.contact .php-email-form button[type="submit"] {
-  background: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  );
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: linear-gradient(
-      rgb(90, 217, 231),
-      rgb(248, 173, 60),
-      rgb(248, 60, 60)
-    )
-    82;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1468,6 +1438,11 @@ section {
 .profile-carousel {
   position: relative;
   z-index: 1;
+  box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
+  transition: all ease-in-out 0.3s;
+  border: 5px solid #191919;
+  background-color: #ffffff;
+  padding-top: 3%;
 }
 
 .profile-carousel .owl-nav .owl-prev,
@@ -1532,11 +1507,7 @@ section {
 }
 
 .portfolio-details .profile-carousel .owl-dot.active {
-  background-color: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  ) !important;
+  background-color: white !important
 }
 
 .portfolio-details .portfolio-info {
