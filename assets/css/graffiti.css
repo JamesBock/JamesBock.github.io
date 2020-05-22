@@ -200,6 +200,7 @@ h6 {
 
 .custom_overlay h4 {
   position: relative;
+  font-weight: 300;
 }
 
 .custom_overlay p {
@@ -207,6 +208,8 @@ h6 {
   line-height: 1.4em;
   position: absolute;
   right: 50%;
+  font-weight: 300;
+  font-family: "Open Sans";
 }
 
 .custom_overlay h4:after {
@@ -222,7 +225,7 @@ h6 {
 /*------------------- TABLET ------------------*/
 @media only screen and (min-width: 600px) and (max-width: 999px) {
   .custom_overlay h4 {
-    font-size: 90%;
+    font-size: 125%;
   }
 
   .custom_overlay p {
@@ -266,11 +269,9 @@ h6 {
 }
 
 #topbar .contact-info i {
-  color: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  );
+  color:
+  rgb(60, 214, 248)
+   ;
   padding-right: 4px;
 }
 
@@ -287,7 +288,8 @@ h6 {
 }
 
 #topbar .social-links a:hover {
-  color: #fff;
+  color:  rgb(60, 214, 248)
+  ;
 }
 
 #topbar .social-links a:first-child {
@@ -307,6 +309,15 @@ h6 {
 #header.header-scrolled {
   top: 0;
   background: rgba(0, 0, 0, 0.9);
+}
+#header.header-scrolled .drop-down ul{
+  
+  background:  rgb(80, 189, 206) !important;
+}
+
+#header.header-scrolled .drop-down a:hover{
+   
+  color: #000000 !important;
 }
 
 #header .header-scrolled a {
@@ -348,7 +359,7 @@ h6 {
   color: #fff;
   padding: 0;
   line-height: 56px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: normal;
   text-transform: uppercase;
   visibility: visible;
@@ -686,8 +697,13 @@ h6 {
   opacity: 0;
   transition: 0.1s;
 }
+#hero.hero-scrolled span {
+  opacity: 0;
+  transition: 0.1s;
+}
 
 #hero.hero-scrolled h1,
+#hero.hero-scrolled span,
 #hero.hero-scrolled h2,
 #hero.hero-scrolled h3,
 #hero.hero-scrolled .btn-meet-me {
@@ -710,28 +726,27 @@ h6 {
 }
 
 #hero h1 {
-  z-index: 0;
   
-  margin: 0 0 20px 0;
-  font-size: 46px;
+  margin: 0 0 10px 0;
+  font-size: 44px;
   font-weight: 700;
-  line-height: 0;
+  line-height: 56px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #000000;
   opacity: 100;
   transition: ease-in 0.4s;
 }
 #hero span {
-  position: relative;
-  top: 30px;
-  font-weight: 700;
+  position: absolute;
+  margin: 0 0 10px 0;
+  font-weight: 400;
   color: #f4f4f4;
-  left: 0;
+  left: 14px;
   right: 0;
-  z-index: 0;
+  
   letter-spacing: normal;
   text-transform: uppercase;
-  font-size: 45px;
+  font-size: 44px;
   background: -webkit-linear-gradient(
     rgb(128, 6, 155),
     rgb(248, 173, 60),
@@ -741,7 +756,7 @@ h6 {
   background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 65px;
+  line-height: 56px;
 }
 
 #hero h2 {
@@ -833,8 +848,8 @@ section {
 } */
 
 .section-title h2 {
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 46px;
+  font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
@@ -869,7 +884,8 @@ section {
 .section-title p {
   margin-bottom: 0;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  color: #ffffff;
 }
 
 @media (max-width: 575px) {
@@ -888,16 +904,16 @@ section {
 --------------------------------------------------------------*/
 .about .content {
   box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
-  transition: all ease-in-out 0.3s;
+  /* transition: all ease-in-out 0.3s; */
   border: 5px solid #191919;
   background-color: #ffffff;
 }
 
 .about .content h3 {
-  font-weight: 600;
+  font-weight: 100;
   font-size: 26px;
   padding-top: 10px;
-  font-family: "Open Sans", sans-serif;
+  
 }
 
 .about .content ul {
@@ -913,11 +929,9 @@ section {
 .about .content ul i {
   font-size: 22px;
   padding-right: 4px;
-  color: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  );
+  color: 
+  rgb(60, 214, 248)
+  ;
 }
 
 .about .content p:last-child {
@@ -942,8 +956,8 @@ section {
 
 .education .box span {
   display: block;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 300;
   color: #191919;
 }
 
@@ -1150,7 +1164,7 @@ section {
   color: #444444;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .portfolio #portfolio-flters li:hover,
@@ -1164,7 +1178,7 @@ section {
 }
 
 .portfolio .portfolio-item {
-  margin: 10px;
+  
   box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
   transition: all ease-in-out 0.3s;
   border: 5px solid #191919;
@@ -1493,11 +1507,7 @@ section {
 }
 
 .portfolio-details .profile-carousel .owl-dot.active {
-  background-color: linear-gradient(
-    rgb(90, 217, 231),
-    rgb(248, 173, 60),
-    rgb(248, 60, 60)
-  ) !important;
+  background-color: white !important
 }
 
 .portfolio-details .portfolio-info {

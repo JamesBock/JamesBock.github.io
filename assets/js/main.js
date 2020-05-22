@@ -238,21 +238,22 @@
     nav: true,
     navText: ["", ""],
     loop: true,
-    //items: 1,
-    margin: 5,
+    items: 1,
+    margin: 100,
     center: true,
-    autoWidth: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 2,
-      },
-      1000: {
-        itemes: 3,
-      },
-    },
+     autoWidth: true
+     //,
+    // responsive: {
+    //   0: {
+    //     items: 1,
+    //   },
+    //   600: {
+    //     items: 2,
+    //   },
+    //   1000: {
+    //     itemes: 3,
+    //   },
+    // },
   });
 
   // Initi AOS
