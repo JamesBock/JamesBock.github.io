@@ -660,8 +660,7 @@ h6 {
   transition: none;
 }
 #themeDrop li {
-  padding: 10px;
-
+  padding: 4px;
   position: relative;
   white-space: nowrap;
   list-style: none;
@@ -996,7 +995,7 @@ section {
 # languages
 --------------------------------------------------------------*/
 .languages {
-  background: #f2f2f2;
+  background:  rgba(47, 36, 30, 0.823);
   padding: 15px 0;
   text-align: center;
 }

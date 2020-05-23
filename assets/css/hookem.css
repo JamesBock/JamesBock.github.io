@@ -618,8 +618,7 @@ h6 {
   transition: none;
 }
 #themeDrop li {
-   padding: 10px;
-  
+  padding: 4px;
   position: relative;
   white-space: nowrap;
   list-style: none;

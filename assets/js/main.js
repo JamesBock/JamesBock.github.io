@@ -4,6 +4,22 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+
+ //monitors and applies theme
+(function (global) {
+  
+  
+  if (sessionStorage.getItem("theme") == document.getElementById("cssTheme").href || sessionStorage.getItem("theme") == null ) {
+      
+    document.getElementById("cssTheme").href = "assets/css/hookem.css";
+    sessionStorage.setItem("theme",document.getElementById("cssTheme").href);
+     
+  } else {
+    document.getElementById("cssTheme").href = sessionStorage.getItem("theme");
+     
+  }
+})(window);
+
 (function (global) {
   sessionStorage.setItem("theme", document.getElementById("cssTheme").href);
 })(window);
