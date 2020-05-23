@@ -5,8 +5,8 @@
  * License: https://bootstrapmade.com/license/
  */
 (function (global) {
-    sessionStorage.setItem("theme", document.getElementById("cssTheme").href );
-}(window));
+  sessionStorage.setItem("theme", document.getElementById("cssTheme").href);
+})(window);
 
 !(function (q) {
   "use strict";
@@ -23,7 +23,6 @@
   });
   //let theme = document.getElementById("cssTheme").href ;
 
-
   q("#themeDrop a").on({
     mouseover: function (e) {
       document.getElementById("cssTheme").href = e.target.id;
@@ -31,7 +30,7 @@
     },
 
     click: function (e) {
-        sessionStorage.setItem("theme", e.target.id);
+      sessionStorage.setItem("theme", e.target.id);
 
       document.getElementById("cssTheme").href = e.target.id;
     },
@@ -164,22 +163,24 @@
 
   // Toggle .header-scrolled class to #header when page is scrolled
   q(window).scroll(function () {
-    if (q(this).scrollTop() > 260) {
-      q("#header").addClass("header-scrolled");
-      q("#topbar").addClass("topbar-scrolled");
-      q("#hero").addClass("hero-scrolled");
-    } else {
-      q("#header").removeClass("header-scrolled");
-      q("#topbar").removeClass("topbar-scrolled");
-      q("#hero").removeClass("hero-scrolled");
+    if (q(document.getElementById("topbar").length)) {
+      if (q(this).scrollTop() > 260) {
+        q("#header").addClass("header-scrolled");
+        q("#topbar").addClass("topbar-scrolled");
+        q("#hero").addClass("hero-scrolled");
+      } else {
+        q("#header").removeClass("header-scrolled");
+        q("#topbar").removeClass("topbar-scrolled");
+        q("#hero").removeClass("hero-scrolled");
+      }
     }
   });
 
-  if (q(window).scrollTop() > 260) {
-    q("#header").addClass("header-scrolled");
-    q("#topbar").addClass("topbar-scrolled");
-    q("#hero").addClass("hero-scrolled");
-  }
+  // if (q(window).scrollTop() > 260 && q(document.getElementById("topbar").length)) {
+  //   q("#header").addClass("header-scrolled");
+  //   q("#topbar").addClass("topbar-scrolled");
+  //   q("#hero").addClass("hero-scrolled");
+  // }
 
   // Back to top button
   q(window).scroll(function () {
@@ -239,10 +240,10 @@
     navText: ["", ""],
     loop: true,
     items: 1,
-    margin: 100,
+    margin: 150,
     center: true,
-     autoWidth: true
-     //,
+    autoWidth: true,
+    //,
     // responsive: {
     //   0: {
     //     items: 1,
@@ -264,7 +265,7 @@
       once: false,
     });
   }
-  $(document).ready(function(){
+  $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
   aos_init();
