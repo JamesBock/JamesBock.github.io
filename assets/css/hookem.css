@@ -11,6 +11,7 @@ a {
 }
 
 a:hover {
+  
   color: #3c3e82;
   text-decoration: none;
 }
@@ -277,14 +278,24 @@ h6 {
   top: 0;
   background: rgba(0, 0, 0, 0.9);
 }
+#header .drop-down ul {
+  cursor: pointer;
+
+}
 #header.header-scrolled .drop-down ul {
    
   background: #cf751b !important;
 }
 #header.header-scrolled .drop-down a:hover{
-   
+  cursor: pointer;
   color: #000000 !important;
 }
+
+#header .drop-down a:hover{
+  cursor: pointer;
+  color: #cf751b;
+}
+
 #header .header-scrolled a {
   font-size: 28px;
   margin: 0;

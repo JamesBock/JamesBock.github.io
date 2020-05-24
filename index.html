@@ -1,22 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <script>
-      function ChangeTheme() {
-        if (document.getElementById("themeButton").innerText === "Hook 'em") {
-          document
-            .getElementById("cssTheme")
-            .setAttribute("href", "assets/css/graffiti.css");
-          document.getElementById("themeButton").innerText = "Graffiti Park";
-          console.log(true);
-        } else {
-          document.getElementById("cssTheme").href = "assets/css/hookem.css";
-          document.getElementById("themeButton").innerText = "Hook 'em";
-          console.log(false);
-        }
-      }
-    </script> -->
-   
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -49,8 +33,8 @@
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
-    <link id="cssTheme" href="assets/css/hookem.css"  rel="stylesheet" />
-    
+    <link id="cssTheme" href="assets/css/hookem.css" rel="stylesheet" />
+
     <!-- =======================================================
     * Template Name: Day - v2.0.0
     * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
@@ -97,19 +81,17 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
-      <div class="container d-flex align-items-center">
-        <h1  class="mr-auto"><a  href="index.html">Hi, I'm James Bock</a></h1>
-        <!--<h2>Dev</h2>-->
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <div class="holder" style="transition: none;"> -->
+        <div class="container d-flex align-items-center">
+          <h1 class="mr-auto"><a href="index.html">Hi, I'm James Bock</a></h1>
 
-        <nav class="nav-menu d-none d-lg-block">
-          <ul>
-            <li class="active"><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li class="drop-down">
-              <a href="#portfolio">Portfolio</a>
-              <ul>
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li class="drop-down">
+                <a id="portfolioDrop" href="#portfolio">Portfolio</a>
+                <!-- <ul>
                 <li>
                   <a href="DrugInteracionsdetails.html">Drug Interactions</a>
                 </li>
@@ -119,45 +101,41 @@
                 <li><a href="APIdetails.html">DrugInteractionAPI</a></li>
                 <li><a href="WebDesigndetails.html">Web design</a></li>
                 <li><a href="Researchdetails.html">Health Research</a></li>
-              </ul>
-            </li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-            
-            <li class="drop-down"><a href="" data-toggle="tooltip" data-placement="right" title="Hover to preview, click to set">Theme</a>
-              <ul id="themeDrop">
-                <li>
-                  <a id="assets/css/hookem.css">Hook 'em</a>
+              </ul> -->
+              </li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+
+              <li class="drop-down">
+                <a
+                  href=""
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Hover to preview, click to set"
+                  >Theme</a
+                >
+                <ul id="themeDrop">
+                  <!-- <li>
+                  <a data-toggle="tooltip" data-placement="left" title="Click to set" id="assets/css/hookem.css">Hook 'em</a>
                 </li>
                 <li>
-                  <a id="assets/css/sonic.css">Sonic</a>
+                  <a  data-toggle="tooltip" data-placement="left" title="Click to set"id="assets/css/sonic.css">Sonic</a>
                 </li>
                 <li>
-                  <a id="assets/css/graffiti.css">Graffiti Park</a>
+                  <a data-toggle="tooltip" data-placement="left" title="Click to set" id="assets/css/graffiti.css">Graffiti Park</a>
                 </li>
-                            <li>
-                              <a id="assets/css/undefinedStyle.css">undefined </a>
-                            </li>
-                <!-- <li>
-                  <a id="Undefined">Undefined</a>
-                </li> -->
-              </ul>
-            </div>
-            <!-- <li>
-              <a href=""
-                >Theme:
-                <button type="button" onclick="ChangeTheme();" id="themeButton">
-                  Hook 'em
-                </button></a
-              >
-            </li> -->
-          </ul>
-        </nav>
-        <!-- .nav-menu -->
+                <li>
+                  <a data-toggle="tooltip" data-placement="left" title="Click to set" id="assets/css/undefinedStyle.css">undefined </a>
+                </li>        -->
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        <!-- </div> -->
       </div>
     </header>
-    
+
     <!-- End Header -->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
@@ -165,19 +143,16 @@
         class="container position-relative"
         data-aos="fade-up"
         data-aos-delay="500"
-        
       >
-     
         <span>Hi, I'm James</span>
         <h1>Hi, I'm James</h1>
-     
+
         <h2>I design and develop healthcare solutions</h2>
         <h2>
           Looking to join a team and create amazing things in the Austin area
         </h2>
         <a href="#about" class="btn-meet-me scrollto">Meet me</a>
       </div>
-      
     </section>
     <!-- End Hero -->
 
@@ -376,61 +351,61 @@
       <section id="languages" class="languages">
         <div class="container">
           <div class="section-title">
-        <span>Top Technologies</span>
-        <h2>Top Technologies</h2>
-      </div>
-        <div class="container" data-aos="zoom-in">
-          <div class="row d-flex align-items-center">
-            <div class="col-lg-2 col-md-4 col-6">
-              <img
-                src="assets/img/csharp-original.svg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
+            <span>Top Technologies</span>
+            <h2>Top Technologies</h2>
+          </div>
+          <div class="container" data-aos="zoom-in">
+            <div class="row d-flex align-items-center">
+              <div class="col-lg-2 col-md-4 col-6">
+                <img
+                  src="assets/img/csharp-original.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
 
-            <div class="col-lg-2 col-md-4 col-6">
-              <img
-                src="assets/img/dot-net-original-wordmark.svg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <img
+                  src="assets/img/dot-net-original-wordmark.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
 
-            <div class="col-lg-2 col-md-4 col-6">
-              <img
-                src="assets/img/git-original-wordmark.svg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <img
+                  src="assets/img/git-original-wordmark.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
 
-            <div class="col-lg-2 col-md-4 col-6">
-              <img
-                src="assets/img/bootstrap-plain.svg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <img
+                  src="assets/img/bootstrap-plain.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
 
-            <div class="col-lg-2 col-md-4 col-6">
-              <img
-                src="assets/img/javascript-original.svg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <img
+                  src="assets/img/javascript-original.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
 
-            <div class="col-lg-2 col-md-4 col-6">
-              <img
-                src="assets/img/html5-original.svg"
-                class="img-fluid"
-                alt=""
-              />
+              <div class="col-lg-2 col-md-4 col-6">
+                <img
+                  src="assets/img/html5-original.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
       <!-- End Languages Section -->
       <!-- ======= Portfolio Section ======= -->
@@ -453,166 +428,12 @@
             </div>
           </div>
 
-          <div
+          <div id="portfolioDiv"
             class="row portfolio-container"
             data-aos="fade-up"
             data-aos-delay="150"
             style="margin: 10px;"
           >
-            <div class="col-lg-4 col-md-6 portfolio-item">
-              <img
-                src="assets/img/DrugInteractiondemoClip.gif"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Drug Interactions</h4>
-                <p>SMART on FHIR App</p>
-                <!--<a href="assets/img/DrugInteractiondemoClip.gif" title="Drug Interactions"><i class="bx bx-plus"></i></a>-->
-                <a
-                  href="DrugInteracionsdetails.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item">
-              <img
-                src="assets/img/PolicyScrollUnitChange.gif"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Clinical Compounding</h4>
-                <p>Cross-Platform App</p>
-                <!--<a href="assets/img/PolicyScrollUnitChange.gif" title="Clinical Compounding"><i class="bx bx-plus"></i></a>-->
-                <a
-                  href="Compoundingdetails.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <img
-                src="assets/img/PortfolioSmaller.gif"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Personal Portfolio</h4>
-                <p>The page you're on right now!</p>
-                <!--<a href="assets/img/PortfolioSmaller.gif" title="Personal Portfolio"><i class="bx bx-plus"></i></a>-->
-                <a
-                  href="WebDesigndetails.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <img
-                src="assets/img/DrugInteractionAPI.png"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>DrugInteractionAPI</h4>
-                <p>Open-Source NuGet Package</p>
-                <!--<a href="assets/img/DrugInteractionAPI.png" title="DrugInteractionAPI"><i class="bx bx-plus"></i></a>-->
-                <a
-                  href="APIdetails.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <img
-                src="assets/img/SSBPosterJamesBock05052016thumb.png"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Health Research</h4>
-                <p>with robust statistical analysis</p>
-                <!--<a href="assets/img/DrugInteractionAPI.png" title="DrugInteractionAPI"><i class="bx bx-plus"></i></a>-->
-                <a
-                  href="Researchdetails.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <!--<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 2</h4>
-                                <p>Card</p>
-                                <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>Web</p>
-                                <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 3</h4>
-                                <p>App</p>
-                                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
-                                <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 3</h4>
-                                <p>Card</p>
-                                <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>-->
           </div>
         </div>
       </section>
@@ -1140,8 +961,7 @@
     <script src="assets/vendor/aos/aos.js"></script>
 
     <!-- Template Main JS File -->
-    <script  src="assets/js/state.js"></script>
+    
     <script src="assets/js/main.js"></script>
-  
   </body>
 </html>
