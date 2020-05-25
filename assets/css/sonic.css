@@ -138,6 +138,7 @@ body {
   
   .custom_overlay_wrapper {
     position: relative;
+    
   }
   
   .custom_overlay_wrapper img {
@@ -146,6 +147,7 @@ body {
   }
   
   .custom_overlay {
+    
     position: absolute;
     top: 0;
     bottom: 0;
@@ -162,9 +164,11 @@ body {
   
   .custom_overlay:hover {
     opacity: 1;
+    
   }
   
   .custom_overlay_inner {
+    
     position: absolute;
     bottom: 30%;
     left: 5%;
@@ -268,7 +272,7 @@ body {
   --------------------------------------------------------------*/
   #header {
     background: rgba(52, 58, 64, 0.2);
-    transition: all 0.9s;
+    /* transition: all 0.9s; */
     z-index: 997;
     top: 40px;
   }
@@ -279,7 +283,7 @@ body {
 
   #header.header-scrolled {
     top: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(132, 124, 124, 0.9);
   }
   #header.header-scrolled .drop-down ul {
     
@@ -429,14 +433,15 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    top: calc(100% + 30px);
+    /* top: calc(100% + 30px); */
+    top: 100%;
     z-index: 99;
     opacity: 0;
     visibility: hidden;
     padding: 10px 0;
     background-color: rgba(127, 137, 161, 0.45);
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    transition: 0.3s;
+    transition: 0.5s;
   }
   
   .nav-menu .drop-down:hover > ul {
@@ -840,7 +845,7 @@ body {
   
   .about .content {
     
-   
+   border-top: 5px solid transparent;
     border-bottom: 5px dotted #1624c1;
     border-left: 5px dotted #1624c1;
     border-bottom-left-radius: 45px;
@@ -1380,7 +1385,8 @@ body {
   --------------------------------------------------------------*/
   .breadcrumbs {
     padding: 15px 0;
-    background: #efefef;
+    color: #ddd;
+    background: #1624c1;
     margin-top: 58px;
   }
   
@@ -1393,6 +1399,10 @@ body {
   .breadcrumbs h2 {
     font-size: 26px;
     font-weight: 600;
+   }
+   
+  .breadcrumbs a {
+    color: #ddd;   
   }
   
   .breadcrumbs ol {
@@ -1427,8 +1437,10 @@ body {
   }
   
   .profile-carousel {
+    
     position: relative;
     z-index: 1;
+   
     /* box-shadow: 0px 2px 15px rgba(245, 242, 242, 1); */
     transition: all ease-in-out 0.3s;
     border-top-right-radius: 0;
@@ -1440,7 +1452,7 @@ body {
     background-color: #ffffff;
     padding-top: 3%;
   }
-  
+ 
   .profile-carousel .owl-nav .owl-prev,
   .profile-carousel .owl-nav .owl-next,
   .profile-carousel .owl-dot {
