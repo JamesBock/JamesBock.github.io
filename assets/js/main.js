@@ -5,24 +5,64 @@
  * License: https://bootstrapmade.com/license/
  */
 
- //monitors and applies theme
+themes = {
+  "Hook 'em": "assets/css/hookem.css",
+  Sonic: "assets/css/sonic.css",
+  "Graffiti Park": "assets/css/graffiti.css",
+  "undefined ": "assets/css/undefinedStyle.css",
+};
+
+//monitors and applies theme
 (function (global) {
-  
-  
-  if (sessionStorage.getItem("theme") == document.getElementById("cssTheme").href || sessionStorage.getItem("theme") == null ) {
-      
+  if (
+    sessionStorage.getItem("theme") ==
+      document.getElementById("cssTheme").href ||
+    sessionStorage.getItem("theme") == null
+  ) {
     document.getElementById("cssTheme").href = "assets/css/hookem.css";
-    sessionStorage.setItem("theme",document.getElementById("cssTheme").href);
-     
+    sessionStorage.setItem("theme", document.getElementById("cssTheme").href);
   } else {
     document.getElementById("cssTheme").href = sessionStorage.getItem("theme");
-     
   }
 })(window);
 
 (function (global) {
   sessionStorage.setItem("theme", document.getElementById("cssTheme").href);
 })(window);
+
+function GetThemes(object) {
+  for (const key in object) {
+    if (object.hasOwnProperty(key)) {
+      let item = document.createElement("li");
+      let anchor = document.createElement("a");
+      anchor.innerHTML = key;
+      anchor.setAttribute("data-toggle", "tooltip");
+      anchor.setAttribute("data-placement", "left");
+      anchor.setAttribute("title", "Click to set");
+      item.appendChild(anchor);
+      document.getElementById("themeDrop").appendChild(item);
+    }
+  }
+}
+
+// function portfolioList(array) {
+//   let list = document.createElement("ul");
+//   array.forEach((element) => {
+//     let item = document.createElement("li");
+//     let anchor = document.createElement("a");
+
+//     for (const key in element) {
+//       if (element.hasOwnProperty(key)) {
+//         anchor.innerHTML = key;
+//         anchor.href = element[key];
+//         item.appendChild(anchor);
+//         list.appendChild(item);
+//       }
+//     }
+//   });
+//   return list;
+// }
+// document.getElementById("portfolioDrop").after(portfolioList(pages));
 
 !(function (q) {
   "use strict";
@@ -37,18 +77,18 @@
         });
     }
   });
-  //let theme = document.getElementById("cssTheme").href ;
+
+  GetThemes(themes);
 
   q("#themeDrop a").on({
     mouseover: function (e) {
-      document.getElementById("cssTheme").href = e.target.id;
-      //   console.log(event.relatedTarget);
+      document.getElementById("cssTheme").href = themes[e.target.innerHTML];
     },
 
     click: function (e) {
-      sessionStorage.setItem("theme", e.target.id);
+      sessionStorage.setItem("theme", themes[e.target.innerHTML]);
 
-      document.getElementById("cssTheme").href = e.target.id;
+      document.getElementById("cssTheme").href = themes[e.target.innerHTML];
     },
   });
 
@@ -109,6 +149,27 @@
       }
     }
   });
+  
+  let list = document.createElement("ul");
+  q.getJSON("/Projects.json", function (j) {
+    let magePages = j;
+    console.log(j);
+    for (let i = 0; i < magePages.projects.length; i++) {
+      for (const key in magePages.projects[i]) {
+      if (magePages.projects[i].hasOwnProperty(key)) {
+        let item = document.createElement("li");
+        let anchorPortfolio = document.createElement("a");
+        
+        anchorPortfolio.innerHTML = key;
+        anchorPortfolio.href = magePages.projects[i][key].href;
+        item.appendChild(anchorPortfolio);
+        list.appendChild(item);
+      }
+    }
+  }
+});
+
+  document.getElementById("portfolioDrop").after(list);
 
   // Mobile Navigation
   if (q(".nav-menu").length) {
@@ -178,6 +239,7 @@
   });
 
   // Toggle .header-scrolled class to #header when page is scrolled
+  //if there is no topbar section,
   q(window).scroll(function () {
     if (q(document.getElementById("topbar").length)) {
       if (q(this).scrollTop() > 260) {
@@ -281,8 +343,10 @@
       once: false,
     });
   }
+
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
+
   aos_init();
 })(jQuery);

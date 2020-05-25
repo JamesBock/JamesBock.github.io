@@ -1,0 +1,46 @@
+{
+    "projects": [
+      {
+        "Drug Interactions": {
+          "href": "/DrugInteracionsdetails.html",
+          "src": "assets/img/DrugInteractiondemoClip.gif",
+          "p": "SMART on FHIR App"
+        }
+      },
+      {
+        "Clinical Compounding": {
+          "href": "/Compoundingdetails.html",
+          "src": "assets/img/PolicyScrollUnitChange.gif",
+          "p": "Cross-Platform App"
+        }
+      },
+      {
+        "Personal Portfolio": {
+         "href": "/WebDesigndetails.html",
+          "src": "assets/img/PortfolioSmaller.gif",
+          "p": "Cross-Platform App"
+        }
+      },
+      {
+        "DrugInteractionAPI": {
+          "href": "/APIdetails.html",
+          "src": "assets/img/DrugInteractionAPI.png",
+          "p": "Open-Source NuGet Package"
+        }
+      },
+      {
+        "Health Research": {
+          "href": "/Researchdetails.html",
+          "src": "assets/img/SSBPosterJamesBock05052016thumb.png",
+          "p": "with robust statistical analysis"
+        }
+      },
+      {
+        "Total Neonatal Nutrition": {
+          "href": "/NeonatalNutritiondetails.html",
+          "src": "assets/img/TNNThumb.png",
+          "p": "Neonatal Tracking System"
+        }
+      }
+    ]
+  }
