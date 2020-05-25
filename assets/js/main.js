@@ -12,55 +12,6 @@ var pages = [
   { "Health Research": "/Researchdetails.html" },
   { "Neonatal Nutrition": "/NeonatalNutritiondetails.html" },
 ];
-var magePages = {
-  projects: [
-    {
-      "Drug Interactions": {
-         "href": "/DrugInteracionsdetails.html" ,
-         "src": "assets/img/DrugInteractiondemoClip.gif" ,
-         "p": "SMART on FHIR App" ,}
-      ,
-    },
-    {
-      "Clinical Compounding": {
-         "href": "/Compoundingdetails.html" ,
-         "src": "assets/img/PolicyScrollUnitChange.gif" ,
-         "p": "Cross-Platform App" ,}
-      ,
-    },
-    {
-      "Personal Portfolio": {
-         "href": "/WebDesigndetails.html" ,
-         "src": "assets/img/PortfolioSmaller.gif" ,
-         "p": "Cross-Platform App" ,}
-      ,
-    },
-    {
-      DrugInteractionAPI: {
-         href: "/APIdetails.html" ,
-         src: "assets/img/DrugInteractionAPI.png" ,
-         p: "Open-Source NuGet Package" ,}
-      ,
-    },
-    {
-      "Health Research": {
-         "href": "/Researchdetails.html" ,
-         "src": "assets/img/SSBPosterJamesBock05052016thumb.png" ,
-         "p": "with robust statistical analysis" ,}
-      ,
-    },
-    {
-      "Neonatal Nutrition": {
-        
-          "href": "/NeonatalNutritiondetails.html",
-        
-         "src": "assets/img/LogoHeart2.png" ,
-         "p": "Neonatal Tracking System" ,}
-      ,
-    },
-  ],
-};
-
 
 themes = {
   "Hook 'em": "assets/css/hookem.css",
@@ -69,45 +20,6 @@ themes = {
   "undefined ": "assets/css/undefinedStyle.css",
 };
 
-for (let i = 0; i < magePages.projects.length; i++) {
-  for (const key in magePages.projects[i]) {
-    if (magePages.projects[i].hasOwnProperty(key)) {
-     
-    let topDiv = document.createElement("div");
-
-    topDiv.setAttribute("class", "col-lg-4 col-md-6 portfolio-item");
-
-    let image = document.createElement("img");
-    image.setAttribute("src", magePages.projects[i][key].src);
-    image.setAttribute("class", "img-fluid");
-    topDiv.appendChild(image);
-    secondDiv = document.createElement("div");
-    secondDiv.setAttribute("class", "portfolio-info");
-
-    let hFour = document.createElement("h4");
-    hFour.innerHTML = key;
-  
-    secondDiv.appendChild(hFour);
-
-    let para = document.createElement("p");
-    para.innerHTML = magePages.projects[i][key].p;
-    secondDiv.appendChild(para);
-
-    let anchor = document.createElement("a");
-    anchor.setAttribute("href", magePages.projects[i][key].href);
-    anchor.setAttribute("class", "details-link");
-    anchor.setAttribute("title", "More Details");
-
-    secondDiv.appendChild(anchor);
-    let icon = document.createElement("i");
-    icon.setAttribute("class", "bx bx-link");
-    anchor.appendChild(icon);
-    secondDiv.appendChild(anchor);
-    topDiv.appendChild(secondDiv);
-    document.getElementById("portfolioDiv").after(topDiv);
-  }
-}
-}
 //monitors and applies theme
 (function (global) {
   if (
@@ -148,24 +60,24 @@ function GetThemes(object) {
   }
 }
 
-function portfolioList(array) {
-  let list = document.createElement("ul");
-  array.forEach((element) => {
-    let item = document.createElement("li");
-    let anchor = document.createElement("a");
+// function portfolioList(array) {
+//   let list = document.createElement("ul");
+//   array.forEach((element) => {
+//     let item = document.createElement("li");
+//     let anchor = document.createElement("a");
 
-    for (const key in element) {
-      if (element.hasOwnProperty(key)) {
-        anchor.innerHTML = key;
-        anchor.href = element[key];
-        item.appendChild(anchor);
-        list.appendChild(item);
-      }
-    }
-  });
-  return list;
-}
-document.getElementById("portfolioDrop").after(portfolioList(pages));
+//     for (const key in element) {
+//       if (element.hasOwnProperty(key)) {
+//         anchor.innerHTML = key;
+//         anchor.href = element[key];
+//         item.appendChild(anchor);
+//         list.appendChild(item);
+//       }
+//     }
+//   });
+//   return list;
+// }
+// document.getElementById("portfolioDrop").after(portfolioList(pages));
 
 !(function (q) {
   "use strict";
@@ -252,6 +164,27 @@ document.getElementById("portfolioDrop").after(portfolioList(pages));
       }
     }
   });
+  
+  let list = document.createElement("ul");
+  q.getJSON("/Projects.json", function (j) {
+    let magePages = j;
+    console.log(j);
+    for (let i = 0; i < magePages.projects.length; i++) {
+      for (const key in magePages.projects[i]) {
+      if (magePages.projects[i].hasOwnProperty(key)) {
+        let item = document.createElement("li");
+        let anchorPortfolio = document.createElement("a");
+        
+        anchorPortfolio.innerHTML = key;
+        anchorPortfolio.href = magePages.projects[i][key].href;
+        item.appendChild(anchorPortfolio);
+        list.appendChild(item);
+      }
+    }
+  }
+});
+
+  document.getElementById("portfolioDrop").after(list);
 
   // Mobile Navigation
   if (q(".nav-menu").length) {

@@ -1133,8 +1133,8 @@ body {
     
     box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
     transition: all ease-in-out 0.3s;
-    
-    border: 5px double #42df0d;
+    border-bottom: 3px solid #42df0d;
+    border-right: 3px solid #42df0d;
     background-color: #ffffff;
   }
   
