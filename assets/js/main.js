@@ -4,14 +4,6 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
-var pages = [
-  { "Drug Interactions": "/DrugInteracionsdetails.html" },
-  { "Clinical Compounding": "/Compoundingdetails.html" },
-  { DrugInteractionAPI: "/APIdetails.html" },
-  { "Web design": "/WebDesigndetails.html" },
-  { "Health Research": "/Researchdetails.html" },
-  { "Neonatal Nutrition": "/NeonatalNutritiondetails.html" },
-];
 
 themes = {
   "Hook 'em": "assets/css/hookem.css",
@@ -38,13 +30,6 @@ themes = {
   sessionStorage.setItem("theme", document.getElementById("cssTheme").href);
 })(window);
 
-// var str = "<ul>";
-// pages.forEach(function (p) {
-//   str += "<li>" + p "</li>";
-// });
-
-// str += "</ul>";
-// document.getElementById("porfolioDrop").innerHTML = str;
 function GetThemes(object) {
   for (const key in object) {
     if (object.hasOwnProperty(key)) {

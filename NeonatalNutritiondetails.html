@@ -84,9 +84,9 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Clinical Compounding</li>
+            <li>Total Neonatal Nutrition</li>
           </ol>
-          <h2>Clinical Compounding</h2>
+          <h2>Total Neonatal Nutrition</h2>
         </div>
       </section>
       <!-- End Breadcrumbs -->
@@ -97,97 +97,67 @@
             <div>
               <a
                 class="venobox"
+                data-vbtype="video"
                 data-gall="compoundGallery"
-                href="assets/img/AminoMax.gif"
+                href="https://youtu.be/K5NFjobmikY  "
                 ><img
                   style="width: auto;"
                   class="img-fluid"
-                  src="assets/img/AminoMax.gif"
+                  src="assets/img/TNNThumb.png"
                   alt=""
               /></a>
               <a
                 class="venobox"
+                data-vbtype="video"
                 data-gall="compoundGallery"
-                href="assets/img/PolicyScrollUnitChange.gif"
+                href="https://youtu.be/MctloXXrfk0"
+              ></a>
+              <a
+                class="venobox"
+                data-vbtype="video"
+                data-gall="compoundGallery"
+                href="https://youtu.be/Sp5ZY6OtR2U"
+              ></a>
+              <a
+                class="venobox"
+                data-vbtype="video"
+                data-gall="compoundGallery"
+                href="https://youtu.be/oM_up1aEd7o"
               ></a>
             </div>
             <div class="portfolio-info">
               <h3>Project Summary</h3>
               <ul>
-                <li><strong>Tech</strong>: C#, UWP, SQL</li>
+                <li><strong>Tech</strong>: C#, VB, Excel, SQL</li>
                 <li>
-                  <strong>Libraries</strong>: ReactiveUI, Dynamic Data, MediatR,
-                  Stateless, Entity Framework Core
+                  <strong>Libraries</strong>: Office Interop
                 </li>
                 <li>
-                  <strong>Techniques</strong>: Reactive Programming, Dependency
-                  Injection
-                </li>
-                <li><strong>Start date</strong>: July, 2019</li>
+                  <strong>Techniques</strong>: System design, Macros, Conditional formatting, Named ranges</li>
+                <li><strong>Start date</strong>: January, 2018</li>
                 <!--<li><strong>Project URL</strong>: <a href="#">blog coming soon!</a></li>-->
               </ul>
             </div>
           </div>
 
           <div class="portfolio-description">
-            <h2>Clinical Compounding</h2>
+            <h2>Total Neonatal Nutrition</h2>
             <p>
-              This project is a solution for a problem I encountered while
-              working as Dietitian in a NICU. Ordering intravenous nutrition was
-              still being written on paper forms and being faxed to place the
-              order. I collected data for months on errors made during the
-              process, and determined that over 90-95% of them could have been
-              corrected with basic Clinical Decision Support.
+              As a dietitian, I was promoted to handle nutrition care for premature infants in the Neonatal Intensive Care Unit.
+              With a lack of professional experience in this specialty, I knew I needed to develop something to
+              help me tackle the learning curve of this calculation-intensive discipline.
             </p>
             <p>
-              When the prescriber goes to place an order, the system evaluates
-              the contents of the order in terms of Ingredients (i.e. the
-              constituents of the order, like Sodium Chloride or an Amino Acid
-              Solution like Trophamine) and Factors (the constituents of the
-              Ingredients, like sodium or total amino acids). The program
-              contextualizes those constituents in terms of the Policies the
-              prescriber's facility has set and chooses the most appropriate
-              control for ordering each ingredient. As of now, Policies
-              represent minimums, maximums and a recommended range that can be
-              set in the context of the patient, a specified duration, an order,
-              or another Factor. As the user manipulates the Ingredient amounts,
-              the program continually assesses these Policies and gives feedback
-              to the prescriber through the controls.
+              Over a year and a half, I compiled a number of different functions into the system that covered every
+              aspect of nutritional care for infants and unit management. I recorded a series of videos to capture the features and
+              provide a tutorial for others in the region to use. 
+
+
             </p>
-            <p>
-              As shown above in the first image, this is shown when one
-              Ingredient, containing the Factor Amino Acids, increases and the
-              control of another Ingredient containing Amino Acids is modulated
-              to reduce the amount of that Ingredient which is available for
-              ordering to conform with the Policies. Once the Policy maximum is
-              reached (in this case, the Policy with the lowest threshold is 5
-              grams per kilogram of body weight), no Ingredient containing that
-              Factor can be increased until one of the Ingredients is decreased
-              to prevent overordering. While all of this is happening, the
-              totals of all Factors in the Order are updated in real time in the
-              first column to the right and the second column is a summary of
-              the amount the patient is receiving of each Factor across all
-              Orders. The second column is time-adjusted and forward-looking,
-              meaning if the Order is being placed at noon but won't be given to
-              the patient until 10PM, the system displays amounts from Orders
-              that will be active at 10PM and projects through the duration of
-              the Order. Functionality will be added for backward-looking
-              aggregation as well.
-            </p>
-            <p>
-              Image two is zoomed in to one of the Ingredient controls. Each
-              control displays a scrollable list of all the Policies that are
-              applied to the control for the prescriber's reference. The list is
-              generated with specificity to the Patient's "Type" (e.g. Early
-              Neonate, Pediatric, Older Adult, etc...) and the administration
-              route of the medication. Disease state specific Policies are
-              currently in development. The Factor's display units can be
-              changed to conform to a given Policy by double-clicking on the
-              item to cycle through Policies for that factor. This functionality
-              is also available in the summary columns. Once the prescriber is
-              happy with all of the components, the Order is sent via FHIR/HL7
-              to the EHR and the compounder, if appropriate.
-            </p>
+           <p>
+             This was the project that inspired me to learn coding more formally. I began incorporating Visual Basic 
+             into functions and I was astounded by the possibilities of what could be achieve with code. 
+           </p>
           </div>
         </div>
       </section>
@@ -270,7 +240,6 @@
     <script src="assets/vendor/aos/aos.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/state.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
