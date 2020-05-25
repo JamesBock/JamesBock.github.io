@@ -64,23 +64,23 @@ function GetThemes(object) {
 // }
 // document.getElementById("portfolioDrop").after(portfolioList(pages));
 
-!(function (q) {
+!(function ($) {
   "use strict";
 
   // Preloader
-  q(window).on("load", function () {
-    if (q("#preloader").length) {
-      q("#preloader")
-        .delay(100)
+  $(window).on("load", function () {
+    if ($("#preloader").length) {
+      $("#preloader")
+        .delay(400)
         .fadeOut("slow", function () {
-          q(this).remove();
+          $(this).remove();
         });
     }
   });
 
   GetThemes(themes);
 
-  q("#themeDrop a").on({
+  $("#themeDrop a").on({
     mouseover: function (e) {
       document.getElementById("cssTheme").href = themes[e.target.innerHTML];
     },
@@ -92,14 +92,14 @@ function GetThemes(object) {
     },
   });
 
-  q("#header").on("mouseleave", function (e) {
+  $("#header").on("mouseleave", function (e) {
     if (document.getElementById("cssTheme").href !== sessionStorage.theme) {
       document.getElementById("cssTheme").href = sessionStorage.theme;
     }
   });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  q(document).on("click", ".nav-menu a, .mobile-nav a, .scrollto", function (
+  $(document).on("click", ".nav-menu a, .mobile-nav a, .scrollto", function (
     e
   ) {
     if (
@@ -108,24 +108,24 @@ function GetThemes(object) {
       location.hostname == this.hostname
     ) {
       e.preventDefault();
-      var target = q(this.hash);
+      var target = $(this.hash);
       if (target.length) {
         var scrollto = target.offset().top;
         var scrolled = 20;
 
-        if (q("#header").length) {
-          scrollto -= q("#header").outerHeight();
+        if ($("#header").length) {
+          scrollto -= $("#header").outerHeight();
 
-          if (!q("#header").hasClass("header-scrolled")) {
+          if (!$("#header").hasClass("header-scrolled")) {
             scrollto += scrolled;
           }
         }
 
-        if (q(this).attr("href") == "#header") {
+        if ($(this).attr("href") == "#header") {
           scrollto = 0;
         }
 
-        q("html, body").animate(
+        $("html, body").animate(
           {
             scrollTop: scrollto,
           },
@@ -133,17 +133,17 @@ function GetThemes(object) {
           "easeInOutExpo"
         );
 
-        if (q(this).parents(".nav-menu, .mobile-nav").length) {
-          q(".nav-menu .active, .mobile-nav .active").removeClass("active");
-          q(this).closest("li").addClass("active");
+        if ($(this).parents(".nav-menu, .mobile-nav").length) {
+          $(".nav-menu .active, .mobile-nav .active").removeClass("active");
+          $(this).closest("li").addClass("active");
         }
 
-        if (q("body").hasClass("mobile-nav-active")) {
-          q("body").removeClass("mobile-nav-active");
-          q(".mobile-nav-toggle i").toggleClass(
+        if ($("body").hasClass("mobile-nav-active")) {
+          $("body").removeClass("mobile-nav-active");
+          $(".mobile-nav-toggle i").toggleClass(
             "icofont-navigation-menu icofont-close"
           );
-          q(".mobile-nav-overly").fadeOut();
+          $(".mobile-nav-overly").fadeOut();
         }
         return false;
       }
@@ -151,7 +151,7 @@ function GetThemes(object) {
   });
   
   let list = document.createElement("ul");
-  q.getJSON("/Projects.json", function (j) {
+  $.getJSON("/Projects.json", function (j) {
     let magePages = j;
     console.log(j);
     for (let i = 0; i < magePages.projects.length; i++) {
@@ -172,105 +172,105 @@ function GetThemes(object) {
   document.getElementById("portfolioDrop").after(list);
 
   // Mobile Navigation
-  if (q(".nav-menu").length) {
-    var qmobile_nav = q(".nav-menu").clone().prop({
+  if ($(".nav-menu").length) {
+    var $mobile_nav = $(".nav-menu").clone().prop({
       class: "mobile-nav d-lg-none",
     });
-    q("body").append(qmobile_nav);
-    q("body").prepend(
+    $("body").append($mobile_nav);
+    $("body").prepend(
       '<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>'
     );
-    q("body").append('<div class="mobile-nav-overly"></div>');
+    $("body").append('<div class="mobile-nav-overly"></div>');
 
-    q(document).on("click", ".mobile-nav-toggle", function (e) {
-      q("body").toggleClass("mobile-nav-active");
-      q(".mobile-nav-toggle i").toggleClass(
+    $(document).on("click", ".mobile-nav-toggle", function (e) {
+      $("body").toggleClass("mobile-nav-active");
+      $(".mobile-nav-toggle i").toggleClass(
         "icofont-navigation-menu icofont-close"
       );
-      q(".mobile-nav-overly").toggle();
+      $(".mobile-nav-overly").toggle();
     });
 
-    q(document).on("click", ".mobile-nav .drop-down > a", function (e) {
+    $(document).on("click", ".mobile-nav .drop-down > a", function (e) {
       e.preventDefault();
-      q(this).next().slideToggle(300);
-      q(this).parent().toggleClass("active");
+      $(this).next().slideToggle(300);
+      $(this).parent().toggleClass("active");
     });
 
-    q(document).click(function (e) {
-      var container = q(".mobile-nav, .mobile-nav-toggle");
+    $(document).click(function (e) {
+      var container = $(".mobile-nav, .mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
-        if (q("body").hasClass("mobile-nav-active")) {
-          q("body").removeClass("mobile-nav-active");
-          q(".mobile-nav-toggle i").toggleClass(
+        if ($("body").hasClass("mobile-nav-active")) {
+          $("body").removeClass("mobile-nav-active");
+          $(".mobile-nav-toggle i").toggleClass(
             "icofont-navigation-menu icofont-close"
           );
-          q(".mobile-nav-overly").fadeOut();
+          $(".mobile-nav-overly").fadeOut();
         }
       }
     });
-  } else if (q(".mobile-nav, .mobile-nav-toggle").length) {
-    q(".mobile-nav, .mobile-nav-toggle").hide();
+  } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
+    $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
   // Navigation active state on scroll
-  var nav_sections = q("section");
-  var main_nav = q(".nav-menu, #mobile-nav");
+  var nav_sections = $("section");
+  var main_nav = $(".nav-menu, #mobile-nav");
 
-  q(window).on("scroll", function () {
-    var cur_pos = q(this).scrollTop() + 80;
+  $(window).on("scroll", function () {
+    var cur_pos = $(this).scrollTop() + 80;
 
     nav_sections.each(function () {
-      var top = q(this).offset().top,
-        bottom = top + q(this).outerHeight();
+      var top = $(this).offset().top,
+        bottom = top + $(this).outerHeight();
 
       if (cur_pos >= top && cur_pos <= bottom) {
         if (cur_pos <= bottom) {
           main_nav.find("li").removeClass("active");
         }
         main_nav
-          .find('a[href="#' + q(this).attr("id") + '"]')
+          .find('a[href="#' + $(this).attr("id") + '"]')
           .parent("li")
           .addClass("active");
       }
       if (cur_pos < 300) {
-        q(".nav-menu ul:first li:first").addClass("active");
+        $(".nav-menu ul:first li:first").addClass("active");
       }
     });
   });
 
   // Toggle .header-scrolled class to #header when page is scrolled
   //if there is no topbar section,
-  q(window).scroll(function () {
-    if (q(document.getElementById("topbar").length)) {
-      if (q(this).scrollTop() > 260) {
-        q("#header").addClass("header-scrolled");
-        q("#topbar").addClass("topbar-scrolled");
-        q("#hero").addClass("hero-scrolled");
+  $(window).scroll(function () {
+    if ($(document.getElementById("topbar").length)) {
+      if ($(this).scrollTop() > 260) {
+        $("#header").addClass("header-scrolled");
+        $("#topbar").addClass("topbar-scrolled");
+        $("#hero").addClass("hero-scrolled");
       } else {
-        q("#header").removeClass("header-scrolled");
-        q("#topbar").removeClass("topbar-scrolled");
-        q("#hero").removeClass("hero-scrolled");
+        $("#header").removeClass("header-scrolled");
+        $("#topbar").removeClass("topbar-scrolled");
+        $("#hero").removeClass("hero-scrolled");
       }
     }
   });
 
-  // if (q(window).scrollTop() > 260 && q(document.getElementById("topbar").length)) {
-  //   q("#header").addClass("header-scrolled");
-  //   q("#topbar").addClass("topbar-scrolled");
-  //   q("#hero").addClass("hero-scrolled");
+  // if ($(window).scrollTop() > 260 && $(document.getElementById("topbar").length)) {
+  //   $("#header").addClass("header-scrolled");
+  //   $("#topbar").addClass("topbar-scrolled");
+  //   $("#hero").addClass("hero-scrolled");
   // }
 
   // Back to top button
-  q(window).scroll(function () {
-    if (q(this).scrollTop() > 100) {
-      q(".back-to-top").fadeIn("slow");
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $(".back-to-top").fadeIn("slow");
     } else {
-      q(".back-to-top").fadeOut("slow");
+      $(".back-to-top").fadeOut("slow");
     }
   });
 
-  q(".back-to-top").click(function () {
-    q("html, body").animate(
+  $(".back-to-top").click(function () {
+    $("html, body").animate(
       {
         scrollTop: 0,
       },
@@ -281,24 +281,24 @@ function GetThemes(object) {
   });
 
   // Porfolio isotope and filter
-  q(window).on("load", function () {
-    var portfolioIsotope = q(".portfolio-container").isotope({
+  $(window).on("load", function () {
+    var portfolioIsotope = $(".portfolio-container").isotope({
       itemSelector: ".portfolio-item",
     });
 
-    q("#portfolio-flters li").on("click", function () {
-      q("#portfolio-flters li").removeClass("filter-active");
-      q(this).addClass("filter-active");
+    $("#portfolio-flters li").on("click", function () {
+      $("#portfolio-flters li").removeClass("filter-active");
+      $(this).addClass("filter-active");
 
       portfolioIsotope.isotope({
-        filter: q(this).data("filter"),
+        filter: $(this).data("filter"),
       });
       aos_init();
     });
 
     // Initiate venobox
-    q(document).ready(function () {
-      q(".venobox").venobox({
+    $(document).ready(function () {
+      $(".venobox").venobox({
         share: [],
         spinner: "double-bounce",
         // spinColor: "#cf751b",
@@ -310,7 +310,7 @@ function GetThemes(object) {
     });
   });
 
-  q(".profile-carousel").owlCarousel({
+  $(".profile-carousel").owlCarousel({
     //autoplay: true,
     lazyLoad: true,
     touchDrag: true,
