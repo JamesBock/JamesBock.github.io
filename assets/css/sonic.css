@@ -272,7 +272,7 @@ body {
   --------------------------------------------------------------*/
   #header {
     background: rgba(52, 58, 64, 0.2);
-    /* transition: all 0.9s; */
+    transition: all 0.9s;
     z-index: 997;
     top: 40px;
   }
@@ -283,7 +283,7 @@ body {
 
   #header.header-scrolled {
     top: 0;
-    background: rgba(132, 124, 124, 0.9);
+    background: rgba(3, 21, 88, 0.9);
   }
   #header.header-scrolled .drop-down ul {
     
@@ -296,7 +296,7 @@ body {
   }
   
   #header .header-scrolled a {
-    font-size: 28px;
+    font-size: 44px;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -339,15 +339,16 @@ body {
     letter-spacing: normal;
     text-transform: uppercase;
     visibility: visible;
+ 
   }
   
   #header h1 {
-    font-size: 28px;
+    font-size: 44px;
     margin: 0;
     padding: 0;
     line-height: 1;
     font-weight: 700;
-    letter-spacing: 2px;
+  
     text-transform: uppercase;
     color: #fff;
     visibility: hidden;

@@ -1,5 +1,5 @@
 (function ($){
-$.getJSON("/Projects.json", function (j) {
+$.getJSON("Projects.json", function (j) {
   let magePages = j;
 for (let i = 0; i < magePages.projects.length; i++) {
   for (const key in magePages.projects[i]) {

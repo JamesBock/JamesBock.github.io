@@ -272,7 +272,7 @@ body {
   --------------------------------------------------------------*/
   #header {
     background: rgba(52, 58, 64, 0.2);
-    /* transition: all 0.9s; */
+    transition: all 0.9s;
     z-index: 997;
     top: 40px;
   }

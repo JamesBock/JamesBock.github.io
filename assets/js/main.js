@@ -71,7 +71,7 @@ function GetThemes(object) {
   $(window).on("load", function () {
     if ($("#preloader").length) {
       $("#preloader")
-        .delay(400)
+        .delay(300)
         .fadeOut("slow", function () {
           $(this).remove();
         });
@@ -80,19 +80,26 @@ function GetThemes(object) {
 
   GetThemes(themes);
 
+  // $("#themeDrop a").on("mouseover", function (e) {
+  //     sessionStorage.setItem("theme", themes[e.target.innerHTML]);
+  //     document.getElementById("cssTheme").href = themes[e.target.innerHTML];
+  //   });
   $("#themeDrop a").on({
-    mouseover: function (e) {
+    mouseover : function (e) {
       document.getElementById("cssTheme").href = themes[e.target.innerHTML];
-    },
-
+    }
+    ,
+    
     click: function (e) {
+      
       sessionStorage.setItem("theme", themes[e.target.innerHTML]);
-
       document.getElementById("cssTheme").href = themes[e.target.innerHTML];
-    },
+    }
+
+    
   });
 
-  $("#header").on("mouseleave", function (e) {
+  $("#themeDrop").on("mouseleave", function (e) {
     if (document.getElementById("cssTheme").href !== sessionStorage.theme) {
       document.getElementById("cssTheme").href = sessionStorage.theme;
     }
@@ -149,25 +156,25 @@ function GetThemes(object) {
       }
     }
   });
-  
+
   let list = document.createElement("ul");
-  $.getJSON("/Projects.json", function (j) {
+  $.getJSON("Projects.json", function (j) {
     let magePages = j;
     console.log(j);
     for (let i = 0; i < magePages.projects.length; i++) {
       for (const key in magePages.projects[i]) {
-      if (magePages.projects[i].hasOwnProperty(key)) {
-        let item = document.createElement("li");
-        let anchorPortfolio = document.createElement("a");
-        
-        anchorPortfolio.innerHTML = key;
-        anchorPortfolio.href = magePages.projects[i][key].href;
-        item.appendChild(anchorPortfolio);
-        list.appendChild(item);
+        if (magePages.projects[i].hasOwnProperty(key)) {
+          let item = document.createElement("li");
+          let anchorPortfolio = document.createElement("a");
+
+          anchorPortfolio.innerHTML = key;
+          anchorPortfolio.href = magePages.projects[i][key].href;
+          item.appendChild(anchorPortfolio);
+          list.appendChild(item);
+        }
       }
     }
-  }
-});
+  });
 
   document.getElementById("portfolioDrop").after(list);
 
