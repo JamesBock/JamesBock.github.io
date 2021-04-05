@@ -1108,8 +1108,8 @@ section {
   
   box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
   transition: all ease-in-out 0.3s;
-  
-  border: 5px double #cf751b;
+  list-style: none;
+  /* border: 5px double #cf751b; */
   background-color: #ffffff;
 }
 
@@ -1541,7 +1541,8 @@ section {
   width: 50%;
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 .portfolio-details .portfolio-description p {

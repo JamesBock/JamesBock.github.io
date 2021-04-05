@@ -1563,7 +1563,8 @@ section {
   width: 50%;
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 .portfolio-details .portfolio-description p {

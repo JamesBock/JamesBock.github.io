@@ -64,19 +64,31 @@ function GetThemes(object) {
 // }
 // document.getElementById("portfolioDrop").after(portfolioList(pages));
 
+//either the ! is needed to make the function an expression that can be invoked immediately or enclose the functions in ()  Some confusion on this ...this does both
 !(function ($) {
+  //https://stackoverflow.com/questions/3755606/what-does-the-exclamation-mark-do-before-the-function
   "use strict";
 
   // Preloader
-  $(window).on("load", function () {
-    if ($("#preloader").length) {
-      $("#preloader")
-        .delay(300)
-        .fadeOut("slow", function () {
-          $(this).remove();
-        });
-    }
-  });
+  // $(window).on("load", function () {
+  //   if ($("#preloader").length) {
+  //     $("#preloader")
+  //       .delay(300)
+  //       .fadeOut("slow", function () {
+  //         $(this).remove();
+  //       });
+  //   }
+  // });
+  !(function () {
+    window.addEventListener("load", function () {
+      let preloader = document.getElementById("preloader");
+      preloader.animate(
+        [{ opacity: 1 }, { opacity: 1 }, { opacity: .5 }, { opacity: 0 }],
+        { duration: 500 }
+      );
+      setTimeout(() => preloader.parentNode.removeChild(preloader), 505);
+    });
+  })();
 
   GetThemes(themes);
 
@@ -85,18 +97,13 @@ function GetThemes(object) {
   //     document.getElementById("cssTheme").href = themes[e.target.innerHTML];
   //   });
   $("#themeDrop a").on({
-    mouseover : function (e) {
+    mouseover: function (e) {
       document.getElementById("cssTheme").href = themes[e.target.innerHTML];
-    }
-    ,
-    
+    },
     click: function (e) {
-      
       sessionStorage.setItem("theme", themes[e.target.innerHTML]);
       document.getElementById("cssTheme").href = themes[e.target.innerHTML];
-    }
-
-    
+    },
   });
 
   $("#themeDrop").on("mouseleave", function (e) {
@@ -106,56 +113,58 @@ function GetThemes(object) {
   });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  $(document).on("click", ".nav-menu a, .mobile-nav a, .scrollto", function (
-    e
-  ) {
-    if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
-    ) {
-      e.preventDefault();
-      var target = $(this.hash);
-      if (target.length) {
-        var scrollto = target.offset().top;
-        var scrolled = 20;
+  $(document).on(
+    "click",
+    ".nav-menu a, .mobile-nav a, .scrollto",
+    function (e) {
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        e.preventDefault();
+        var target = $(this.hash);
+        if (target.length) {
+          var scrollto = target.offset().top;
+          var scrolled = 20;
 
-        if ($("#header").length) {
-          scrollto -= $("#header").outerHeight();
+          if ($("#header").length) {
+            scrollto -= $("#header").outerHeight();
 
-          if (!$("#header").hasClass("header-scrolled")) {
-            scrollto += scrolled;
+            if (!$("#header").hasClass("header-scrolled")) {
+              scrollto += scrolled;
+            }
           }
-        }
 
-        if ($(this).attr("href") == "#header") {
-          scrollto = 0;
-        }
+          if ($(this).attr("href") == "#header") {
+            scrollto = 0;
+          }
 
-        $("html, body").animate(
-          {
-            scrollTop: scrollto,
-          },
-          1500,
-          "easeInOutExpo"
-        );
-
-        if ($(this).parents(".nav-menu, .mobile-nav").length) {
-          $(".nav-menu .active, .mobile-nav .active").removeClass("active");
-          $(this).closest("li").addClass("active");
-        }
-
-        if ($("body").hasClass("mobile-nav-active")) {
-          $("body").removeClass("mobile-nav-active");
-          $(".mobile-nav-toggle i").toggleClass(
-            "icofont-navigation-menu icofont-close"
+          $("html, body").animate(
+            {
+              scrollTop: scrollto,
+            },
+            1500,
+            "easeInOutExpo"
           );
-          $(".mobile-nav-overly").fadeOut();
+
+          if ($(this).parents(".nav-menu, .mobile-nav").length) {
+            $(".nav-menu .active, .mobile-nav .active").removeClass("active");
+            $(this).closest("li").addClass("active");
+          }
+
+          if ($("body").hasClass("mobile-nav-active")) {
+            $("body").removeClass("mobile-nav-active");
+            $(".mobile-nav-toggle i").toggleClass(
+              "icofont-navigation-menu icofont-close"
+            );
+            $(".mobile-nav-overly").fadeOut();
+          }
+          return false;
         }
-        return false;
       }
     }
-  });
+  );
 
   let list = document.createElement("ul");
   $.getJSON("Projects.json", function (j) {
@@ -356,4 +365,4 @@ function GetThemes(object) {
   });
 
   aos_init();
-})(jQuery);
+})(jQuery); // jQuery and $ are defined as global in jQuery.js
