@@ -1,53 +1,75 @@
 {
-    "projects": [
-      {
-        "Drug Interactions": {
-          "href": "DrugInteracionsdetails.html",
-          "src": "assets/img/DrugInteractiondemoClip.gif",
-          "p": "SMART on FHIR App"
-        }
-      },
-      {
-        "Clinical Compounding": {
-          "href": "Compoundingdetails.html",
-          "src": "assets/img/PolicyScrollUnitChange.gif",
-          "p": "Cross-Platform App"
-        }
-      },
-      {
-        "Personal Portfolio": {
-         "href": "WebDesigndetails.html",
-          "src": "assets/img/PortfolioSmaller.gif",
-          "p": "The site you're on now!"
-        }
-      },
-      {
-        "DrugInteractionAPI": {
-          "href": "APIdetails.html",
-          "src": "assets/img/DrugInteractionAPI.png",
-          "p": "Open-Source NuGet Package"
-        }
-      },
-      {
-        "Health Research": {
-          "href": "Researchdetails.html",
-          "src": "assets/img/SSBPosterJamesBock05052016thumb.png",
-          "p": "with robust statistical analysis"
-        }
-      },
-      {
-        "Total Neonatal Nutrition": {
-          "href": "NeonatalNutritiondetails.html",
-          "src": "assets/img/TNNThumb.png",
-          "p": "Neonatal Tracking System"
-        }
-      },
-      {
-        "BASTA/Open Austin": {
-          "href": "BastaOpenAustin.html",
-          "src": "assets/img/open-austin-logo.svg",
-          "p": "Tenant-File Web Application"
-        }
+  "projects": [
+    {
+      "Drug Interactions": {
+        "href": "DrugInteracionsdetails.html",
+        "src": "assets/img/FhirScanDemoMed.gif",
+        "p": "Cloud Web App",
+        "list": [
+          "React/Redux",
+          "C#",
+          "ASP.NET Core",
+          "Google Cloud Platform",
+          "Docker",
+          "OAuth",
+          "FHIR"
+        ]
       }
-    ]
-  }
+    },
+    {
+      "Clinical Compounding": {
+        "href": "Compoundingdetails.html",
+        "src": "assets/img/PolicyScrollUnitChange.gif",
+        "p": "Cross-Platform App",
+        "list": ["C#", "Blazor", "FHIR", "Reactives"]
+      }
+    },
+    {
+      "BASTA/Open Austin": {
+        "href": "BastaOpenAustin.html",
+        "src": "assets/img/LabelsForWRR.png",
+        "p": "Tenant-File Web App",
+        "list": [
+          "GraphQL (Hot Chocolate)",
+          "C#",
+          "Google Vision",
+          "Google OCR",
+          "Rest API",
+          "Twilio"
+        ]
+      }
+    },
+    {
+      "Personal Portfolio": {
+        "href": "WebDesigndetails.html",
+        "src": "assets/img/PortfolioSmaller.gif",
+        "p": "The site you're on now!",
+        "list": ["JavaScript", "jQuery", "CSS", "HTML"]
+      }
+    },
+    {
+      "DrugInteractionAPI": {
+        "href": "APIdetails.html",
+        "src": "assets/img/DrugInteractionAPI.png",
+        "p": "Open-Source NuGet Package",
+        "list": ["NuGet", "C#"]
+      }
+    },
+    {
+      "Health Research": {
+        "href": "Researchdetails.html",
+        "src": "assets/img/SSBPosterJamesBock05052016thumb.png",
+        "p": "with robust statistical analysis",
+        "list": ["SAS", "EndNote"]
+      }
+    },
+    {
+      "Total Neonatal Nutrition": {
+        "href": "NeonatalNutritiondetails.html",
+        "src": "assets/img/TNNThumb.png",
+        "p": "Neonatal Tracking System",
+        "list": ["VB", "C#", "Excel", "SQL", "Office Interop"]
+      }
+    }
+  ]
+}

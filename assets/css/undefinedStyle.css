@@ -1727,3 +1727,33 @@ section {
     margin: -20px 0 30px 0;
   }
 }
+/*------------------- TABLET ------------------*/
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+  .custom_overlay h4 {
+    font-size: 90%;
+  }
+
+  .custom_overlay p {
+    /*font-size: 95%;*/
+    line-height: 1.2em;
+  }
+  .portfolio .portfolio-item {
+    width: 100%;
+    margin: 5px ;
+  }
+}
+
+/*------------------- MOBILE ------------------*/
+@media only screen and (max-width: 599px) {
+  .custom_overlay h4 {
+    font-size: 100%;
+  }
+
+  .custom_overlay p {
+    font-size: 85%;
+  }
+  .portfolio .portfolio-item {
+    width: 100%;
+    margin: 5px ;
+  }
+}

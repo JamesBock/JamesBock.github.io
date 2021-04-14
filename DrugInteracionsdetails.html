@@ -100,37 +100,70 @@
 
                    
                     <div>
-                        <a class="venobox" data-overlay="#efgfeg"  data-gall="interactionGallery" href="assets/img/DrugInteractiondemoClip.gif"><img src="assets/img/DrugInteractiondemoClip.gif" style="width:auto" class="img-fluid" alt="">
-                            <a class="venobox" data-gall="interactionGallery" href="assets/img/InteractionDetails.png"></a>
-                            <a class="venobox" data-gall="interactionGallery" href="assets/img/InteractionPhone.gif"></a>
+                        <a class="venobox" data-overlay="#efgfeg"  data-gall="interactionGallery" href="assets/img/FhirScanDemoMed.gif"><img src="assets/img/FhirScanDemoMed.gif" style="width:auto" class="img-fluid" alt="">
+                            <a class="venobox" data-gall="interactionGallery" href="assets/img/FhirScanDemoInteraction.gif"></a>
+                            <a class="venobox" data-gall="interactionGallery" href="assets/img/FhirScanDemoRejected.gif"></a>
+                            <a class="venobox" data-gall="interactionGallery" href="assets/img/FhirScanDemoPatients.gif"></a>
+                           
 
                     </div>
 
                     <div class="portfolio-info">
                         <h3>Project Summary</h3>
                         <ul>
-                            <li><strong>Tech</strong>: C#, Blazor, HTML, CSS, FHIR, REST API</li>
-                            <li><strong>Libraries</strong>: Bootstrap, MediatR, Hl7, NewtonSoft, MatBlazor</li>
-                            <li><strong>Techniques</strong>: Dependency Injection, Channels, Asynchrony </li>
-                            <li><strong>Start date</strong>: March, 2020</li>
-                            <li><strong>Project URL</strong>: <a href="#">blog coming soon!</a></li>
+                            <li><strong>Tech</strong>: React/Redux, C#, Docker, HTML, SCSS, ASP.NET Core</li>
+                            <li><strong>Libraries</strong>: Bootstrap, MediatR, HL7 FHIR, NewtonSoft</li>
+                            <li><strong>Techniques</strong>: CI/CD, Authentication/Authorization, REST API, Dependency Injection </li>
+                            
+                            <li><strong>Demo URL</strong>: <a target="_blank"href="https://fhirscan.app">fhirscan.app</a></li>
                         </ul>
                     </div>
 
                 </div>
 
                 <div class="portfolio-description">
-                    <h2>Drug Interaction Module</h2>
+                    <h2>Drug Interaction (FHIRscan)</h2>
                     <p>
-                        This project started as as experiment with learning Blazor and grew into a practical tool that can be used in clinical and consumer settings. 
+                        FHIRScan provides a medication prescribing application that
+                        has drug-drug interaction detection capabilities, sourced from
+                        the National Library of Medicine’s Unified Medical Language
+                        System.
                     </p>
                     <p>
-                        The module is designed with the use-case of an e-health record pinging the module with a patient ID that can be used to retrive the medications the patient is taking. The module then gathers the proper data, converts it into a readable form for the National Library of Medicine's Drug Interaction API, and parses the information returned from the API. Once the interactions are parsed, they must be connected with the order the prescriber wrote so modifications can be made if necessary based on the interactions.
-                    </p>
-                    <p>
-                        As shown above, the interface
-                        is adaptive so it can be accessed on mobile devices if desired.
-                    </p>
+                        To provide a robust, performant, and secure ordering system, HL7’s FHIR
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href="https://www.hl7.org/fhir/overview.html"
+                        >
+                          
+                          Fast Healthcare Interoperability Resources
+                        </a>
+                        specification is implemented through Google Cloud Healthcare,
+                        providing a fast, scalable, and encrypted platform.
+                      </p>
+                      <p>
+                        The data in this database was generated using
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href="https://synthetichealth.github.io/synthea/"
+                        >
+                          
+                          Synthea
+                        </a>
+                        which generates healthcare data that is realistic, but not real.
+                      </p>
+                      <p>
+                        In the demo of the app, ordering privileges are controlled via accesss token
+                        tied to an assisgnable practitioner role "credential". These are self-assignable in the home page. 
+                      </p>
+                      <p>
+                        Physician is the only role that can order medications, while
+                        nurses can check interactions and view the patients'
+                        medications.
+                        </p>
+                        <p>The user in the images above only has nurse access and is rejected when trying to order a mediacation. </p>
                 </div>
 
             </div>

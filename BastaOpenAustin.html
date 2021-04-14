@@ -98,11 +98,11 @@
               <a
                 class="venobox"
                 data-gall="compoundGallery"
-                href="assets/img/open-austin-logo.svg"
+                href="assets/img/LabelsForWRR.png"
                 ><img
                   style="width: auto;"
                   class="img-fluid"
-                  src="assets/img/open-austin-logo.svg"
+                  src="assets/img/LabelsForWRR.png"
                   alt=""
                   />
                   <a
@@ -121,11 +121,12 @@
               <ul>
                 <li><strong>Tech</strong>: C#, TypeScript, Postgres</li>
                 <li>
-                  <strong>Libraries</strong>: Hot Chocolate (graphQL), ASP.NET Core, React, Twilio, Google Cloud SQL              </li>
+                  <strong>Libraries</strong>: Hot Chocolate (graphQL), ASP.NET Core, React, Twilio, Google Cloud SQL, Google Vision, Google OCR </li>
                 <li>
                   <strong>Techniques</strong>: Kanban, Agile, CI/CD</li>
-                <li><strong>Start date</strong>: March, 2020</li>
-           
+                          <li>
+                  <strong>GitHub</strong>: <a target="_blank" href="https://github.com/open-austin/BASTA-tfwa">https://github.com/open-austin/BASTA-tfwa</a></li>
+                          
               </ul>
             </div>
           </div>
@@ -140,8 +141,11 @@
 
             </p>
            <p>
-            I worked collaboratively with Open Austin, “a volunteer citizen brigade advocating for open government, open data, and civic application development since 2009”. Working and coordinating this a large team like the one of the project was exciting and introduced me to the principles of modern team development like Agile.
+            I contributed primarily on the backend of the project, building the graphQL server with dataloaders and integrating a number of cloud assets from Google Cloud Platform. 
            </p>
+           <p>With these assets implemented, the app can assess images sent via MMS and label them with automated descriptions. If text is detected, Occular Character Recognition is used to scan the document for keywords and phrases that are used to direct the text conversation flow that the tenant is having with our Twilio bot.</p>
+           <p>Automated content moderation is also used to reject or sequester images that are inappropriate or privacy concerns.</p>
+           <p>The primary image above exhibits many of these capabilities. It shows the graphQL playground querying the database for images of a specific tenant. The labels associated with a specific image are shown. Text was found in the particular image and OCR picked up a keypharse that was persisted to the database.</p>
           </div>
         </div>
       </section>

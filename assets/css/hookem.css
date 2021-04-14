@@ -11,7 +11,6 @@ a {
 }
 
 a:hover {
-  
   color: #3c3e82;
   text-decoration: none;
 }
@@ -193,28 +192,7 @@ h6 {
   bottom: -5px;
   height: 2px;
 }
-/*------------------- TABLET ------------------*/
-@media only screen and (min-width: 600px) and (max-width: 999px) {
-  .custom_overlay h4 {
-    font-size: 90%;
-  }
 
-  .custom_overlay p {
-    /*font-size: 95%;*/
-    line-height: 1.2em;
-  }
-}
-
-/*------------------- MOBILE ------------------*/
-@media only screen and (max-width: 599px) {
-  .custom_overlay h4 {
-    font-size: 100%;
-  }
-
-  .custom_overlay p {
-    font-size: 85%;
-  }
-}
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
@@ -280,18 +258,16 @@ h6 {
 }
 #header .drop-down ul {
   cursor: pointer;
-
 }
 #header.header-scrolled .drop-down ul {
-   
   background: #cf751b !important;
 }
-#header.header-scrolled .drop-down a:hover{
+#header.header-scrolled .drop-down a:hover {
   cursor: pointer;
   color: #000000 !important;
 }
 
-#header .drop-down a:hover{
+#header .drop-down a:hover {
   cursor: pointer;
   color: #cf751b;
 }
@@ -328,7 +304,6 @@ h6 {
   text-transform: uppercase;
   visibility: hidden;
 }
-
 
 #header.header-scrolled h1 a {
   margin: 0 0 10px 0;
@@ -379,15 +354,15 @@ h6 {
     letter-spacing: normal;
     text-transform: uppercase;
     visibility: visible;
-  } 
+  }
 
   #header .logo {
     font-size: 28px;
-  } 
+  }
   #header .logo h2 {
-            font-size: 8px;
-        }
-} 
+    font-size: 8px;
+  }
+}
 
 .header-inner-pages {
   background: rgba(0, 0, 0, 0.9) !important;
@@ -454,7 +429,6 @@ h6 {
 .nav-menu .drop-down li {
   min-width: 180px;
   position: relative;
-  
 }
 
 .nav-menu .drop-down ul a {
@@ -622,7 +596,6 @@ h6 {
   color: #fff;
 }
 
-
 #themeDrop ul {
   margin: 0;
   padding: 0;
@@ -641,11 +614,11 @@ h6 {
   display: block;
   position: absolute;
   left: 0;
- 
+
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  padding:  0;
+  padding: 0;
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: none !important;
@@ -788,7 +761,6 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
-  
 }
 
 .section-title {
@@ -845,8 +817,6 @@ section {
 --------------------------------------------------------------*/
 
 .about .content {
-  
-  
   border: 5px double #cf751b;
   background-color: #ffffff;
 }
@@ -1105,10 +1075,9 @@ section {
 }
 
 .portfolio .portfolio-item {
-  
   box-shadow: 0px 2px 15px rgba(245, 242, 242, 0.639);
   transition: all ease-in-out 0.3s;
-  list-style: none;
+
   /* border: 5px double #cf751b; */
   background-color: #ffffff;
 }
@@ -1445,7 +1414,6 @@ section {
   font-family: "fontAwesome";
 }
 
-
 .owl-prev {
   position: absolute;
   top: 275px;
@@ -1715,4 +1683,38 @@ section {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
   }
+}
+/*------------------- TABLET ------------------*/
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+  .custom_overlay h4 {
+    font-size: 90%;
+  }
+
+  .custom_overlay p {
+    /*font-size: 95%;*/
+    line-height: 1.2em;
+  }
+  .portfolio .portfolio-item {
+    width: 100%;
+    margin: 5px;
+  }
+}
+
+/*------------------- MOBILE ------------------*/
+@media only screen and (max-width: 599px) {
+  .custom_overlay h4 {
+    font-size: 100%;
+  }
+
+  .custom_overlay p {
+    font-size: 85%;
+  }
+  .portfolio .portfolio-item {
+    width: 100%;
+    margin: 5px;
+  }
+}
+#toolsList {
+  list-style: disc;
+  line-height: 200%;
 }
