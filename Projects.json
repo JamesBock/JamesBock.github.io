@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "Drug Interactions": {
+      "FHIRScan": {
         "href": "DrugInteracionsdetails.html",
         "src": "assets/img/FhirScanDemoMed.gif",
         "p": "Cloud Web App",

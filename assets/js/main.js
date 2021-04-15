@@ -83,7 +83,7 @@ function GetThemes(object) {
     window.addEventListener("load", function () {
       let preloader = document.getElementById("preloader");
       preloader.animate(
-        [{ opacity: 1 }, { opacity: 1 }, { opacity: .5 }, { opacity: 0 }],
+        [{ opacity: 1 }, { opacity: 1 }, { opacity: 0.5 }, { opacity: 0 }],
         { duration: 500 }
       );
       setTimeout(() => preloader.parentNode.removeChild(preloader), 505);
@@ -257,25 +257,27 @@ function GetThemes(object) {
   // Toggle .header-scrolled class to #header when page is scrolled
   //if there is no topbar section,
   $(window).scroll(function () {
-    if ($(document.getElementById("topbar").length)) {
+    if (
+      $(document.getElementById("topbar")) !== null ||
+      $(document.getElementById("topbar").length > 0)
+    ) {
       if ($(this).scrollTop() > 260) {
         $("#header").addClass("header-scrolled");
         $("#topbar").addClass("topbar-scrolled");
         $("#hero").addClass("hero-scrolled");
       } else {
-        $("#header").removeClass("header-scrolled");
-        $("#topbar").removeClass("topbar-scrolled");
-        $("#hero").removeClass("hero-scrolled");
+        if (
+          $(this).scrollTop() <= 260 &&
+          $(document.getElementById("topbar")) !== null 
+          
+        ) {
+          $("#header").removeClass("header-scrolled");
+          $("#topbar").removeClass("topbar-scrolled");
+          $("#hero").removeClass("hero-scrolled");
+        }
       }
     }
   });
-
-  // if ($(window).scrollTop() > 260 && $(document.getElementById("topbar").length)) {
-  //   $("#header").addClass("header-scrolled");
-  //   $("#topbar").addClass("topbar-scrolled");
-  //   $("#hero").addClass("hero-scrolled");
-  // }
-
   // Back to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
